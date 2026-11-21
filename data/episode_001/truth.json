@@ -1,0 +1,25 @@
+{
+  "episode_id": "ep_demo_001",
+  "issues": [
+    {
+      "issue_id": "iss_01",
+      "type": "duplicate_invoice",
+      "affected_ids": ["INV-1001", "pay_001", "pay_003"],
+      "expected_amount_minor": 12000000,
+      "currency": "KZT",
+      "acceptable_evidence_sets": [
+        ["doc_inv_01", "doc_pay_01", "doc_pay_03", "ld_0014"]
+      ]
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": ["INV-1002", "pay_002"],
+      "expected_amount_minor": 80000,
+      "currency": "USD",
+      "acceptable_evidence_sets": [
+        ["doc_inv_02", "doc_pay_02", "ld_0011", "ld_0013"]
+      ]
+    }
+  ]
+}
