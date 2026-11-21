@@ -89,4 +89,4 @@ trajectory = [
 with open("trajectories.jsonl", "w") as f:
     for t in trajectory:
         f.write(json.dumps(t) + "\n")
-print("✅ Saved trajectories.jsonl")
+print("Saved trajectories.jsonl")

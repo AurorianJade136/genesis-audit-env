@@ -63,6 +63,10 @@ class AuditEnv:
             return self._get_record(action)
         if kind == "submit":
             return self._submit(action)
+        if kind == "get_document":
+            return self._get_document(action)
+        if kind == "calculator":
+            return self._calculator(action)
 
         return self._error(f"unknown action: {kind!r}")
 
@@ -110,6 +114,28 @@ class AuditEnv:
                 return {"table": name, "record": row, "steps_remaining": self._remaining()}, 0.0, False, False, {}
 
         return self._error(f"record not found: {key}={value!r}")
+
+    def _get_document(self, action):
+        doc_id = action.get("doc_id")
+        if not doc_id:
+            return self._error("doc_id required")
+        for row in self.invoices + self.payments:
+            if row.get("doc_id") == doc_id:
+                return {"document": row, "steps_remaining": self._remaining()}, 0.0, False, False, {}
+        return self._error("document not found")
+
+    def _calculator(self, action):
+        expr = action.get("expression", "")
+        import ast
+        try:
+            node = ast.parse(expr, mode='eval')
+            # Simple safety check: allow only math
+            if not all(isinstance(n, (ast.Expression, ast.BinOp, ast.Constant, ast.UnaryOp, ast.Add, ast.Sub, ast.Mult, ast.Div)) for n in ast.walk(node)):
+                return self._error("invalid math expression")
+            result = eval(compile(node, '<string>', 'eval'), {"__builtins__": None}, {})
+            return {"result": result, "steps_remaining": self._remaining()}, 0.0, False, False, {}
+        except Exception:
+            return self._error("invalid math expression")
 
     def _submit(self, action):
         findings = action.get("findings", [])

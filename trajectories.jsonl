@@ -1,0 +1,2 @@
+{"episode_id": "ep_demo_001", "step": 1, "action": "list_records(payments)", "observation": "Found 3 payments", "reward": 0.0, "terminated": false, "truncated": false}
+{"episode_id": "ep_demo_001", "step": 2, "action": "submit(5 findings)", "observation": "Submitted", "reward": 0.996, "terminated": true, "truncated": false}

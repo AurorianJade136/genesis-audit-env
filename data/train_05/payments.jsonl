@@ -1,0 +1,5 @@
+{"doc_id":"doc_pay_20","payment_id":"pay_348","timestamp":"2026-10-12T10:00:00+05:00","currency":"KZT","amount_minor":12000000,"invoice_refs":["INV-2509"]}
+{"doc_id":"doc_pay_29","payment_id":"pay_809","timestamp":"2026-10-15T15:20:00+05:00","currency":"USD","amount_minor":120000,"invoice_refs":["INV-2876"]}
+{"doc_id":"doc_pay_54","payment_id":"pay_584","timestamp":"2026-10-19T10:05:00+05:00","currency":"KZT","amount_minor":12000000,"invoice_refs":["INV-2509"]}
+{"doc_id":"doc_pay_22","payment_id":"pay_885","timestamp":"2026-10-23T11:00:00+05:00","currency":"USD","amount_minor":100000,"invoice_refs":["INV-2372"]}
+{"doc_id":"doc_pay_54","payment_id":"pay_437","timestamp":"2026-10-31T23:00:00+05:00","currency":"EUR","amount_minor":60000,"invoice_refs":["INV-2652"]}
