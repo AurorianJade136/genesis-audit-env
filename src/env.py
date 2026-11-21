@@ -1,6 +1,7 @@
 import csv
 import json
 import os
+import ast
 from src.matcher import match
 
 MAX_STEPS = 100
@@ -61,12 +62,12 @@ class AuditEnv:
             return self._list_records(action)
         if kind == "get_record":
             return self._get_record(action)
-        if kind == "submit":
-            return self._submit(action)
         if kind == "get_document":
             return self._get_document(action)
         if kind == "calculator":
             return self._calculator(action)
+        if kind == "submit":
+            return self._submit(action)
 
         return self._error(f"unknown action: {kind!r}")
 
@@ -126,7 +127,6 @@ class AuditEnv:
 
     def _calculator(self, action):
         expr = action.get("expression", "")
-        import ast
         try:
             node = ast.parse(expr, mode='eval')
             # Simple safety check: allow only math
@@ -139,7 +139,11 @@ class AuditEnv:
 
     def _submit(self, action):
         findings = action.get("findings", [])
-        truth_issues = self._load_truth_issues() # Only loaded here
+        # TRUTH IS LOADED HERE AND ONLY HERE
+        truth_issues = self._load_truth_issues()
         result = match(truth_issues, findings, self.steps_taken)
+        
+        # Immediately wipe truth from memory
+        truth_issues = None
         
         return {"result": "Submitted successfully"}, result["reward"], True, False, result
