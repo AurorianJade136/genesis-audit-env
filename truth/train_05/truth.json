@@ -1,0 +1,103 @@
+{
+  "episode_id": "train_05",
+  "schema_version": "1.0.0",
+  "amount_tolerance_minor": 0,
+  "issues": [
+    {
+      "issue_id": "iss_01",
+      "type": "period_cutoff_error",
+      "affected_ids": [
+        "INV-8169"
+      ],
+      "expected_amount_minor": 164600,
+      "currency": "JPY",
+      "flavor": "prior_period",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_027",
+          "ld_0101"
+        ],
+        [
+          "doc_inv_027",
+          "ld_0102"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "period_cutoff_error",
+      "affected_ids": [
+        "INV-1601"
+      ],
+      "expected_amount_minor": 1244000,
+      "currency": "EUR",
+      "flavor": "prior_period",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_912",
+          "ld_0018"
+        ],
+        [
+          "doc_inv_912",
+          "ld_0019"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_03",
+      "type": "duplicate_invoice",
+      "secondary_types": [
+        "period_cutoff_error"
+      ],
+      "interacting": true,
+      "affected_ids": [
+        "INV-9968",
+        "pay_2972",
+        "pay_5175"
+      ],
+      "expected_amount_minor": 415000,
+      "currency": "EUR",
+      "flavor": "double_payment_of_cutoff_invoice",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_413",
+          "doc_pay_202",
+          "doc_pay_972",
+          "ld_0007",
+          "ld_0063"
+        ],
+        [
+          "doc_inv_413",
+          "doc_pay_202",
+          "doc_pay_972",
+          "ld_0007",
+          "ld_0064"
+        ],
+        [
+          "doc_inv_413",
+          "doc_pay_202",
+          "doc_pay_972",
+          "ld_0008",
+          "ld_0063"
+        ],
+        [
+          "doc_inv_413",
+          "doc_pay_202",
+          "doc_pay_972",
+          "ld_0008",
+          "ld_0064"
+        ]
+      ]
+    }
+  ],
+  "clean_cases": [
+    "INV-3872",
+    "INV-4735",
+    "INV-4840",
+    "INV-5683",
+    "INV-6178",
+    "INV-6378",
+    "INV-9580",
+    "INV-9720"
+  ]
+}

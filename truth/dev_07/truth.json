@@ -1,0 +1,18 @@
+{
+  "episode_id": "dev_07",
+  "schema_version": "1.0.0",
+  "amount_tolerance_minor": 0,
+  "issues": [],
+  "clean_cases": [
+    "INV-1020",
+    "INV-1057",
+    "INV-1201",
+    "INV-1612",
+    "INV-2443",
+    "INV-3237",
+    "INV-3542",
+    "INV-6223",
+    "INV-7226",
+    "INV-7616"
+  ]
+}

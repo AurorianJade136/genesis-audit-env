@@ -6,13 +6,14 @@
   "period_end": "2026-10-31T23:59:59+05:00",
   "timezone": "Asia/Almaty",
   "currency_exponents": {
+    "GBP": 2,
+    "KWD": 3,
     "KZT": 2,
-    "USD": 2,
-    "EUR": 2
+    "USD": 2
   },
   "counts": {
-    "ledger_rows": 31,
-    "documents": 11
+    "ledger_rows": 186,
+    "documents": 81
   },
   "rounding": {
     "mode": "half_up",

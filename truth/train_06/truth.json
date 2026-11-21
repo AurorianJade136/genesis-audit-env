@@ -1,0 +1,184 @@
+{
+  "episode_id": "train_06",
+  "schema_version": "1.0.0",
+  "amount_tolerance_minor": 0,
+  "issues": [
+    {
+      "issue_id": "iss_01",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-3953",
+        "pay_5306",
+        "pay_4412"
+      ],
+      "expected_amount_minor": 526500,
+      "currency": "JPY",
+      "flavor": "double_payment",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_447",
+          "doc_pay_066",
+          "doc_pay_985",
+          "ld_0075"
+        ],
+        [
+          "doc_inv_447",
+          "doc_pay_066",
+          "doc_pay_985",
+          "ld_0076"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-9847",
+        "pay_5351"
+      ],
+      "expected_amount_minor": 41557000,
+      "currency": "KZT",
+      "flavor": "partial_plug",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_022",
+          "doc_pay_359",
+          "ld_0127",
+          "ld_0129"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_03",
+      "type": "period_cutoff_error",
+      "affected_ids": [
+        "INV-7162"
+      ],
+      "expected_amount_minor": 296290000,
+      "currency": "KZT",
+      "flavor": "prior_period",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_965",
+          "ld_0093"
+        ],
+        [
+          "doc_inv_965",
+          "ld_0094"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_04",
+      "type": "bad_fx_date_or_rate",
+      "affected_ids": [
+        "INV-7912",
+        "pay_2434"
+      ],
+      "expected_amount_minor": 2650489,
+      "currency": "KZT",
+      "flavor": "invoice_booked_wrong_rate",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_925",
+          "doc_pay_549",
+          "fx_2026-04-19_JPY_KZT",
+          "ld_0107"
+        ],
+        [
+          "doc_inv_925",
+          "doc_pay_549",
+          "fx_2026-04-19_JPY_KZT",
+          "ld_0108"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_05",
+      "type": "unallocated_or_partial_payment",
+      "secondary_types": [
+        "bad_fx_date_or_rate"
+      ],
+      "interacting": true,
+      "affected_ids": [
+        "INV-1798",
+        "pay_8506"
+      ],
+      "expected_amount_minor": 163720,
+      "currency": "JPY",
+      "components": {
+        "shortfall_minor": 163720,
+        "shortfall_currency": "JPY",
+        "fx_difference_minor": 2829037,
+        "fx_difference_currency": "KZT",
+        "correct_rate": "3.1974",
+        "booked_rate": "3.1238"
+      },
+      "flavor": "partial_payment_with_stale_fx",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_822",
+          "doc_pay_703",
+          "fx_2026-04-25_JPY_KZT",
+          "ld_0166",
+          "ld_0167",
+          "ld_0168"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_06",
+      "type": "duplicate_invoice",
+      "secondary_types": [
+        "period_cutoff_error"
+      ],
+      "interacting": true,
+      "affected_ids": [
+        "INV-9199",
+        "pay_7052",
+        "pay_6788"
+      ],
+      "expected_amount_minor": 1882200,
+      "currency": "JPY",
+      "flavor": "double_payment_of_cutoff_invoice",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_135",
+          "doc_pay_717",
+          "doc_pay_848",
+          "ld_0007",
+          "ld_0083"
+        ],
+        [
+          "doc_inv_135",
+          "doc_pay_717",
+          "doc_pay_848",
+          "ld_0007",
+          "ld_0084"
+        ],
+        [
+          "doc_inv_135",
+          "doc_pay_717",
+          "doc_pay_848",
+          "ld_0008",
+          "ld_0083"
+        ],
+        [
+          "doc_inv_135",
+          "doc_pay_717",
+          "doc_pay_848",
+          "ld_0008",
+          "ld_0084"
+        ]
+      ]
+    }
+  ],
+  "clean_cases": [
+    "INV-1825",
+    "INV-1957",
+    "INV-2592",
+    "INV-4953",
+    "INV-8105",
+    "INV-8389"
+  ]
+}

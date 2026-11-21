@@ -1,5 +1,20 @@
-{"doc_id":"doc_pay_64","payment_id":"pay_776","timestamp":"2026-10-12T10:00:00+05:00","currency":"KZT","amount_minor":12000000,"invoice_refs":["INV-2959"]}
-{"doc_id":"doc_pay_77","payment_id":"pay_185","timestamp":"2026-10-15T15:20:00+05:00","currency":"USD","amount_minor":120000,"invoice_refs":["INV-2639"]}
-{"doc_id":"doc_pay_46","payment_id":"pay_813","timestamp":"2026-10-19T10:05:00+05:00","currency":"KZT","amount_minor":12000000,"invoice_refs":["INV-2959"]}
-{"doc_id":"doc_pay_58","payment_id":"pay_349","timestamp":"2026-10-23T11:00:00+05:00","currency":"USD","amount_minor":100000,"invoice_refs":["INV-2383"]}
-{"doc_id":"doc_pay_40","payment_id":"pay_836","timestamp":"2026-10-31T23:00:00+05:00","currency":"EUR","amount_minor":60000,"invoice_refs":["INV-2775"]}
+{"doc_id": "doc_pay_073", "payment_id": "pay_9409", "timestamp": "2026-09-03T12:26:00+05:00", "currency": "CNY", "amount_minor": 8340400, "invoice_refs": ["INV-2921"], "entity_id": "ent_9729"}
+{"doc_id": "doc_pay_154", "payment_id": "pay_9646", "timestamp": "2026-09-27T15:09:00+05:00", "currency": "JPY", "amount_minor": 1830700, "invoice_refs": ["INV-5952"], "entity_id": "ent_4789"}
+{"doc_id": "doc_pay_163", "payment_id": "pay_4816", "timestamp": "2026-09-19T11:53:00+05:00", "currency": "EUR", "amount_minor": 1264400, "invoice_refs": ["INV-7714"], "entity_id": "ent_0869"}
+{"doc_id": "doc_pay_212", "payment_id": "pay_3182", "timestamp": "2026-09-25T17:24:00+05:00", "currency": "JPY", "amount_minor": 1577400, "invoice_refs": ["INV-6450"], "entity_id": "ent_4789"}
+{"doc_id": "doc_pay_265", "payment_id": "pay_3918", "timestamp": "2026-09-30T23:16:59+05:00", "currency": "CNY", "amount_minor": 6589000, "invoice_refs": ["INV-3298"], "entity_id": "ent_0308"}
+{"doc_id": "doc_pay_275", "payment_id": "pay_8354", "timestamp": "2026-09-30T22:19:59+05:00", "currency": "JPY", "amount_minor": 891750, "invoice_refs": ["INV-9319"], "entity_id": "ent_6363"}
+{"doc_id": "doc_pay_337", "payment_id": "pay_0239", "timestamp": "2026-09-18T09:39:00+00:00", "currency": "EUR", "amount_minor": 997000, "invoice_refs": ["INV-2393"], "entity_id": "ent_7554"}
+{"doc_id": "doc_pay_420", "payment_id": "pay_6230", "timestamp": "2026-09-09T17:20:00+05:00", "currency": "KZT", "amount_minor": 72986000, "invoice_refs": ["INV-8071"], "entity_id": "ent_7527"}
+{"doc_id": "doc_pay_444", "payment_id": "pay_7435", "timestamp": "2026-09-24T12:00:00+05:00", "currency": "EUR", "amount_minor": 710000, "invoice_refs": ["INV-1138"], "entity_id": "ent_0869"}
+{"doc_id": "doc_pay_484", "payment_id": "pay_8278", "timestamp": "2026-09-24T16:05:00+05:00", "currency": "KZT", "amount_minor": 254272000, "invoice_refs": ["INV-6122"], "entity_id": "ent_4392"}
+{"doc_id": "doc_pay_493", "payment_id": "pay_0473", "timestamp": "2026-09-10T08:20:00+05:00", "currency": "JPY", "amount_minor": 530310, "invoice_refs": ["INV-7884"], "entity_id": "ent_6558"}
+{"doc_id": "doc_pay_519", "payment_id": "pay_6614", "timestamp": "2026-09-09T07:12:00+00:00", "currency": "CNY", "amount_minor": 9880000, "invoice_refs": ["INV-8433"], "entity_id": "ent_6322"}
+{"doc_id": "doc_pay_587", "payment_id": "pay_9001", "timestamp": "2026-09-08T16:52:00+05:00", "currency": "KZT", "amount_minor": 382870000, "invoice_refs": ["INV-4743"], "entity_id": "ent_4534"}
+{"doc_id": "doc_pay_608", "payment_id": "pay_6857", "timestamp": "2026-09-16T11:16:00+05:00", "currency": "JPY", "amount_minor": 389600, "invoice_refs": ["INV-5799"], "entity_id": "ent_6558"}
+{"doc_id": "doc_pay_661", "payment_id": "pay_3969", "timestamp": "2026-09-24T12:24:00+05:00", "currency": "JPY", "amount_minor": 1313800, "invoice_refs": ["INV-6015"], "entity_id": "ent_6363"}
+{"doc_id": "doc_pay_684", "payment_id": "pay_8542", "timestamp": "2026-09-10T17:16:00+05:00", "currency": "KZT", "amount_minor": 96390000, "invoice_refs": ["INV-4357"], "entity_id": "ent_4534"}
+{"doc_id": "doc_pay_788", "payment_id": "pay_5921", "timestamp": "2026-09-04T14:24:00+05:00", "currency": "KZT", "amount_minor": 355190009, "invoice_refs": ["INV-9607"], "entity_id": "ent_7527"}
+{"doc_id": "doc_pay_806", "payment_id": "pay_3699", "timestamp": "2026-09-30T23:58:59+05:00", "currency": "KZT", "amount_minor": 124450000, "invoice_refs": ["INV-9501"], "entity_id": "ent_4392"}
+{"doc_id": "doc_pay_972", "payment_id": "pay_3489", "timestamp": "2026-09-09T08:11:00+05:00", "currency": "EUR", "amount_minor": 506000, "invoice_refs": ["INV-4128"], "entity_id": "ent_7554"}
+{"doc_id": "doc_pay_985", "payment_id": "pay_9978", "timestamp": "2026-09-11T14:03:00+05:00", "currency": "CNY", "amount_minor": 5939200, "invoice_refs": ["INV-3516"], "entity_id": "ent_0308"}

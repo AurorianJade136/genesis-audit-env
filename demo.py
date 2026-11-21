@@ -1,92 +1,32 @@
-from src.env import AuditEnv
+"""Short demo: the same company audited by four policies.  Nothing is written to disk.
 
-print("\n=== STARTING AI AUDITOR SIMULATION ===\n")
+    python demo.py [episode]        # default: dev_01
+"""
+import sys
 
-env = AuditEnv("data/episode_001")
-obs = env.reset()
-print("TASK:", obs["task"])
-print("BUDGET:", obs["steps_remaining"], "steps\n")
+from policies import POLICY_NAMES
+from src.runner import make_env, run_policy
 
-print("--- AGENT ACTION: list_records(payments) ---")
-obs, r, term, trunc, info = env.step({"action": "list_records", "table": "payments", "limit": 5})
-for p in obs.get("records", [])[:3]:
-    print(f"Found payment: {p.get('payment_id')} for invoice {p.get('invoice_refs')}")
-    
-print("\n--- AGENT ACTION: submit(5 findings) ---")
+episode = sys.argv[1] if len(sys.argv) > 1 else "dev_01"
+env, _ = make_env(episode)
+obs, info = env.reset(seed=0)
+print(f"\n=== Episode {info['episode_id']} ===")
+m = obs["manifest"]
+print(f"base currency {m['base_currency']}, period {m['period_start'][:10]} .. {m['period_end'][:10]} "
+      f"({m['timezone']}), ledger rows {m['counts']['ledger_rows']}, documents {m['counts']['documents']}")
+print(f"step budget: {obs['max_steps']}   tables: " +
+      ", ".join(f"{t}={v['rows']}" for t, v in obs["tables"].items()))
 
-findings = [
-    {
-        "type": "duplicate_invoice",
-        "affected_ids": ["INV-1001", "pay_001", "pay_003"],
-        "claimed_amount_minor": 12000000,
-        "currency": "KZT",
-        "evidence_ids": ["doc_inv_01", "doc_pay_01", "doc_pay_03", "ld_0014"],
-        "explanation": "Invoice INV-1001 was paid twice."
-    },
-    {
-        "type": "unallocated_or_partial_payment",
-        "affected_ids": ["INV-1002", "pay_002"],
-        "claimed_amount_minor": 80000,
-        "currency": "USD",
-        "evidence_ids": ["doc_inv_02", "doc_pay_02", "ld_0011", "ld_0013"],
-        "explanation": "Partial payment covered only 120k of 200k, but payable was cleared."
-    },
-    {
-        "type": "period_cutoff_error",
-        "affected_ids": ["INV-1006"],
-        "claimed_amount_minor": 4500000,
-        "currency": "KZT",
-        "evidence_ids": ["doc_inv_06", "ld_0021"],
-        "explanation": "September invoice booked in October."
-    },
-    {
-        "type": "bad_fx_date_or_rate",
-        "affected_ids": ["INV-1004", "pay_004"],
-        "claimed_amount_minor": 1400000,
-        "currency": "KZT",
-        "evidence_ids": ["doc_inv_04", "doc_pay_04", "ld_0025", "fx_2026-10-22_USD_KZT"],
-        "explanation": "Payment converted at wrong date's FX rate."
-    },
-    {
-        "type": "unallocated_or_partial_payment",
-        "affected_ids": ["INV-1005", "pay_005"],
-        "claimed_amount_minor": 40000,
-        "currency": "EUR",
-        "evidence_ids": ["doc_inv_05", "doc_pay_05", "ld_0029", "ld_0030", "ld_0031", "fx_2026-10-27_EUR_KZT"],
-        "explanation": "Partial payment in EUR at period boundary with wrong FX."
-    }
-]
+print("\nWhat an agent sees (first 2 invoices):")
+obs2, *_ = env.step({"action": "list_records", "table": "invoices", "limit": 2})
+for r in obs2["records"]:
+    print(f"  {r['invoice_id']}  {r['currency']} {r['total_minor']}  issued {r['issued_at']}")
+print(f"  next_cursor = {obs2['next_cursor']}")
 
-obs, reward, term, trunc, info = env.step({"action": "submit", "findings": findings})
-
-print(f"\n>>> EVALUATION RESULTS <<<")
-print(f"Reward: {reward:.3f}")
-print(f"True Positives: {info.get('tp', 0)}")
-print(f"False Positives: {info.get('fp', 0)}")
-print(f"False Negatives: {info.get('fn', 0)}")
-print(f"F1 Score: {info.get('f1', 0.0):.3f}")
-
-print("\n\n=== ATTACK SIMULATION (Flag Everything) ===")
-env2 = AuditEnv("data/episode_001")
-env2.reset()
-
-bad_findings = [
-    {"type": "duplicate_invoice", "affected_ids": ["INV-1003"], "claimed_amount_minor": 5800000, "currency": "KZT", "evidence_ids": [], "explanation": "Fake error"},
-    {"type": "unallocated_or_partial_payment", "affected_ids": ["ld_0003"], "claimed_amount_minor": 3000000, "currency": "KZT", "evidence_ids": [], "explanation": "Fake error"}
-]
-
-_, bad_reward, *_ = env2.step({"action": "submit", "findings": bad_findings})
-print(f"The 'Flag Everything' agent gets a reward of: {bad_reward:.3f}")
-print("The scoring system successfully punished the blind attack.")
-print("\n=== SIMULATION ENDED ===")
-
-import json
-# Generate a dummy trajectory for the submission
-trajectory = [
-    {"episode_id": "ep_demo_001", "step": 1, "action": "list_records(payments)", "observation": "Found 3 payments", "reward": 0.0, "terminated": False, "truncated": False},
-    {"episode_id": "ep_demo_001", "step": 2, "action": "submit(5 findings)", "observation": "Submitted", "reward": 0.996, "terminated": True, "truncated": False}
-]
-with open("trajectories.jsonl", "w") as f:
-    for t in trajectory:
-        f.write(json.dumps(t) + "\n")
-print("Saved trajectories.jsonl")
+print(f"\n{'policy':<17}{'reward':>8}{'steps':>7}{'TP':>4}{'FP':>4}{'FN':>4}{'F1':>7}")
+for name in POLICY_NAMES:
+    r = run_policy(name, episode)
+    rep = r["report"]            # closed-evaluator diagnostics, available to the harness only
+    print(f"{name:<17}{r['reward']:>8.3f}{r['steps']:>7}{rep['tp']:>4}{rep['fp']:>4}{rep['fn']:>4}{rep['f1']:>7.2f}")
+print("\nThe attacker (flag_everything) is punished; the oracle is the ceiling; "
+      "reconciliation is a real baseline that reads only what the env exposes.")

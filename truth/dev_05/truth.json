@@ -1,0 +1,99 @@
+{
+  "episode_id": "dev_05",
+  "schema_version": "1.0.0",
+  "amount_tolerance_minor": 0,
+  "issues": [
+    {
+      "issue_id": "iss_01",
+      "type": "bad_fx_date_or_rate",
+      "affected_ids": [
+        "INV-1911",
+        "pay_9936"
+      ],
+      "expected_amount_minor": 18511,
+      "currency": "USD",
+      "flavor": "invoice_booked_wrong_rate",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_176",
+          "doc_pay_947",
+          "fx_2026-01-15_KZT_USD",
+          "ld_0054"
+        ],
+        [
+          "doc_inv_176",
+          "doc_pay_947",
+          "fx_2026-01-15_KZT_USD",
+          "ld_0055"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "bad_fx_date_or_rate",
+      "affected_ids": [
+        "INV-5800",
+        "pay_2744"
+      ],
+      "expected_amount_minor": 11200,
+      "currency": "USD",
+      "flavor": "payment_booked_wrong_rate",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_196",
+          "doc_pay_122",
+          "fx_2026-01-05_KZT_USD",
+          "ld_0040"
+        ],
+        [
+          "doc_inv_196",
+          "doc_pay_122",
+          "fx_2026-01-05_KZT_USD",
+          "ld_0041"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_03",
+      "type": "unallocated_or_partial_payment",
+      "secondary_types": [
+        "bad_fx_date_or_rate"
+      ],
+      "interacting": true,
+      "affected_ids": [
+        "INV-9193",
+        "pay_6317"
+      ],
+      "expected_amount_minor": 970000,
+      "currency": "KWD",
+      "components": {
+        "shortfall_minor": 970000,
+        "shortfall_currency": "KWD",
+        "fx_difference_minor": 43571,
+        "fx_difference_currency": "USD",
+        "correct_rate": "3.4765",
+        "booked_rate": "3.3063"
+      },
+      "flavor": "partial_payment_with_stale_fx",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_729",
+          "doc_pay_784",
+          "fx_2026-01-27_KWD_USD",
+          "ld_0147",
+          "ld_0148",
+          "ld_0149"
+        ]
+      ]
+    }
+  ],
+  "clean_cases": [
+    "INV-2182",
+    "INV-2909",
+    "INV-3976",
+    "INV-8564",
+    "INV-9662",
+    "INV-9882",
+    "INV-9921"
+  ]
+}

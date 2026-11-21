@@ -1,0 +1,149 @@
+{
+  "episode_id": "train_10",
+  "schema_version": "1.0.0",
+  "amount_tolerance_minor": 0,
+  "issues": [
+    {
+      "issue_id": "iss_01",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-9232",
+        "pay_4186",
+        "pay_1778"
+      ],
+      "expected_amount_minor": 710033,
+      "currency": "CNY",
+      "flavor": "double_payment",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_595",
+          "doc_pay_451",
+          "doc_pay_608",
+          "ld_0091"
+        ],
+        [
+          "doc_inv_595",
+          "doc_pay_451",
+          "doc_pay_608",
+          "ld_0092"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-6869",
+        "INV-9984"
+      ],
+      "expected_amount_minor": 4020000,
+      "currency": "CNY",
+      "flavor": "duplicate_invoice_record",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_226",
+          "doc_inv_629",
+          "ld_0089"
+        ],
+        [
+          "doc_inv_226",
+          "doc_inv_629",
+          "ld_0090"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_03",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-5748",
+        "pay_6122"
+      ],
+      "expected_amount_minor": 1644000,
+      "currency": "CNY",
+      "flavor": "partial_plug",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_025",
+          "doc_pay_032",
+          "ld_0036",
+          "ld_0038"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_04",
+      "type": "period_cutoff_error",
+      "affected_ids": [
+        "INV-4531"
+      ],
+      "expected_amount_minor": 7600000,
+      "currency": "CNY",
+      "flavor": "prior_period",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_944",
+          "ld_0011"
+        ],
+        [
+          "doc_inv_944",
+          "ld_0012"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_05",
+      "type": "period_cutoff_error",
+      "affected_ids": [
+        "INV-4997"
+      ],
+      "expected_amount_minor": 883000,
+      "currency": "USD",
+      "flavor": "prior_period",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_501",
+          "ld_0005"
+        ],
+        [
+          "doc_inv_501",
+          "ld_0006"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_06",
+      "type": "bad_fx_date_or_rate",
+      "affected_ids": [
+        "INV-9567",
+        "pay_8035"
+      ],
+      "expected_amount_minor": 19452,
+      "currency": "USD",
+      "flavor": "invoice_booked_wrong_rate",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_169",
+          "doc_pay_704",
+          "fx_2026-12-15_CNY_USD",
+          "ld_0062"
+        ],
+        [
+          "doc_inv_169",
+          "doc_pay_704",
+          "fx_2026-12-15_CNY_USD",
+          "ld_0063"
+        ]
+      ]
+    }
+  ],
+  "clean_cases": [
+    "INV-1306",
+    "INV-1897",
+    "INV-3135",
+    "INV-3943",
+    "INV-5377",
+    "INV-6926",
+    "INV-7619"
+  ]
+}

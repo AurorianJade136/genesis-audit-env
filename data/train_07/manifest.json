@@ -1,18 +1,17 @@
 {
   "schema_version": "1.0.0",
   "episode_id": "train_07",
-  "base_currency": "KZT",
-  "period_start": "2026-10-01T00:00:00+05:00",
-  "period_end": "2026-10-31T23:59:59+05:00",
-  "timezone": "Asia/Almaty",
+  "base_currency": "USD",
+  "period_start": "2026-10-01T00:00:00+09:00",
+  "period_end": "2026-10-31T23:59:59+09:00",
+  "timezone": "Asia/Tokyo",
   "currency_exponents": {
-    "KZT": 2,
-    "USD": 2,
-    "EUR": 2
+    "KWD": 3,
+    "USD": 2
   },
   "counts": {
-    "ledger_rows": 31,
-    "documents": 11
+    "ledger_rows": 142,
+    "documents": 65
   },
   "rounding": {
     "mode": "half_up",

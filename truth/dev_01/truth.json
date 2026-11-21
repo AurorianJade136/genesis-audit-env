@@ -1,0 +1,188 @@
+{
+  "episode_id": "dev_01",
+  "schema_version": "1.0.0",
+  "amount_tolerance_minor": 0,
+  "issues": [
+    {
+      "issue_id": "iss_01",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-9410",
+        "pay_3836",
+        "pay_6491"
+      ],
+      "expected_amount_minor": 837060,
+      "currency": "GBP",
+      "flavor": "double_payment",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_739",
+          "doc_pay_258",
+          "doc_pay_632",
+          "ld_0016"
+        ],
+        [
+          "doc_inv_739",
+          "doc_pay_258",
+          "doc_pay_632",
+          "ld_0017"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-5202",
+        "pay_3221"
+      ],
+      "expected_amount_minor": 1150000,
+      "currency": "KWD",
+      "flavor": "partial_plug",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_669",
+          "doc_pay_157",
+          "ld_0001",
+          "ld_0003"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_03",
+      "type": "period_cutoff_error",
+      "affected_ids": [
+        "INV-3514"
+      ],
+      "expected_amount_minor": 546000,
+      "currency": "USD",
+      "flavor": "prior_period",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_227",
+          "ld_0050"
+        ],
+        [
+          "doc_inv_227",
+          "ld_0051"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_04",
+      "type": "bad_fx_date_or_rate",
+      "affected_ids": [
+        "INV-3785",
+        "pay_2188"
+      ],
+      "expected_amount_minor": 1748689,
+      "currency": "KZT",
+      "flavor": "payment_booked_wrong_rate",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_891",
+          "doc_pay_696",
+          "fx_2026-10-22_GBP_KZT",
+          "ld_0156"
+        ],
+        [
+          "doc_inv_891",
+          "doc_pay_696",
+          "fx_2026-10-22_GBP_KZT",
+          "ld_0157"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_05",
+      "type": "unallocated_or_partial_payment",
+      "secondary_types": [
+        "bad_fx_date_or_rate"
+      ],
+      "interacting": true,
+      "affected_ids": [
+        "INV-3000",
+        "pay_4466"
+      ],
+      "expected_amount_minor": 32000,
+      "currency": "USD",
+      "components": {
+        "shortfall_minor": 32000,
+        "shortfall_currency": "USD",
+        "fx_difference_minor": 1529794,
+        "fx_difference_currency": "KZT",
+        "correct_rate": "491.3250",
+        "booked_rate": "475.2219"
+      },
+      "flavor": "partial_payment_with_stale_fx",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_266",
+          "doc_pay_657",
+          "fx_2026-10-27_USD_KZT",
+          "ld_0018",
+          "ld_0019",
+          "ld_0020"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_06",
+      "type": "duplicate_invoice",
+      "secondary_types": [
+        "period_cutoff_error"
+      ],
+      "interacting": true,
+      "affected_ids": [
+        "INV-5086",
+        "pay_5281",
+        "pay_2559"
+      ],
+      "expected_amount_minor": 52000,
+      "currency": "USD",
+      "flavor": "double_payment_of_cutoff_invoice",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_659",
+          "doc_pay_875",
+          "doc_pay_973",
+          "ld_0118",
+          "ld_0122"
+        ],
+        [
+          "doc_inv_659",
+          "doc_pay_875",
+          "doc_pay_973",
+          "ld_0119",
+          "ld_0122"
+        ],
+        [
+          "doc_inv_659",
+          "doc_pay_875",
+          "doc_pay_973",
+          "ld_0118",
+          "ld_0123"
+        ],
+        [
+          "doc_inv_659",
+          "doc_pay_875",
+          "doc_pay_973",
+          "ld_0119",
+          "ld_0123"
+        ]
+      ]
+    }
+  ],
+  "clean_cases": [
+    "INV-1612",
+    "INV-1678",
+    "INV-2537",
+    "INV-6289",
+    "INV-6595",
+    "INV-7526",
+    "INV-7785",
+    "INV-7871",
+    "INV-8702",
+    "INV-9341"
+  ]
+}

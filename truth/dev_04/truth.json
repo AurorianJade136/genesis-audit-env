@@ -1,0 +1,134 @@
+{
+  "episode_id": "dev_04",
+  "schema_version": "1.0.0",
+  "amount_tolerance_minor": 0,
+  "issues": [
+    {
+      "issue_id": "iss_01",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-5243",
+        "INV-1547"
+      ],
+      "expected_amount_minor": 532000,
+      "currency": "EUR",
+      "flavor": "duplicate_invoice_record",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_423",
+          "doc_inv_581",
+          "ld_0032"
+        ],
+        [
+          "doc_inv_423",
+          "doc_inv_581",
+          "ld_0033"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-6169",
+        "pay_0555",
+        "pay_5947"
+      ],
+      "expected_amount_minor": 239840000,
+      "currency": "KZT",
+      "flavor": "double_payment",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_575",
+          "doc_pay_112",
+          "doc_pay_647",
+          "ld_0067"
+        ],
+        [
+          "doc_inv_575",
+          "doc_pay_112",
+          "doc_pay_647",
+          "ld_0068"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_03",
+      "type": "period_cutoff_error",
+      "affected_ids": [
+        "INV-3337"
+      ],
+      "expected_amount_minor": 191000,
+      "currency": "GBP",
+      "flavor": "next_period",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_752",
+          "ld_0169"
+        ],
+        [
+          "doc_inv_752",
+          "ld_0170"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_04",
+      "type": "duplicate_invoice",
+      "secondary_types": [
+        "period_cutoff_error"
+      ],
+      "interacting": true,
+      "affected_ids": [
+        "INV-7668",
+        "pay_1121",
+        "pay_1295"
+      ],
+      "expected_amount_minor": 397000,
+      "currency": "USD",
+      "flavor": "double_payment_of_cutoff_invoice",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_118",
+          "doc_pay_044",
+          "doc_pay_808",
+          "ld_0003",
+          "ld_0085"
+        ],
+        [
+          "doc_inv_118",
+          "doc_pay_044",
+          "doc_pay_808",
+          "ld_0004",
+          "ld_0085"
+        ],
+        [
+          "doc_inv_118",
+          "doc_pay_044",
+          "doc_pay_808",
+          "ld_0003",
+          "ld_0086"
+        ],
+        [
+          "doc_inv_118",
+          "doc_pay_044",
+          "doc_pay_808",
+          "ld_0004",
+          "ld_0086"
+        ]
+      ]
+    }
+  ],
+  "clean_cases": [
+    "INV-1477",
+    "INV-1580",
+    "INV-3154",
+    "INV-5419",
+    "INV-5833",
+    "INV-6461",
+    "INV-7611",
+    "INV-7637",
+    "INV-7671",
+    "INV-9827"
+  ]
+}

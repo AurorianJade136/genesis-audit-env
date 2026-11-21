@@ -2,17 +2,18 @@
   "schema_version": "1.0.0",
   "episode_id": "dev_04",
   "base_currency": "KZT",
-  "period_start": "2026-10-01T00:00:00+05:00",
-  "period_end": "2026-10-31T23:59:59+05:00",
-  "timezone": "Asia/Almaty",
+  "period_start": "2026-11-01T00:00:00+00:00",
+  "period_end": "2026-11-30T23:59:59+00:00",
+  "timezone": "UTC",
   "currency_exponents": {
+    "EUR": 2,
+    "GBP": 2,
     "KZT": 2,
-    "USD": 2,
-    "EUR": 2
+    "USD": 2
   },
   "counts": {
-    "ledger_rows": 31,
-    "documents": 11
+    "ledger_rows": 176,
+    "documents": 78
   },
   "rounding": {
     "mode": "half_up",

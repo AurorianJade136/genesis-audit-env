@@ -1,0 +1,57 @@
+{
+  "episode_id": "dev_03",
+  "schema_version": "1.0.0",
+  "amount_tolerance_minor": 0,
+  "issues": [
+    {
+      "issue_id": "iss_01",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-5732",
+        "pay_3893"
+      ],
+      "expected_amount_minor": 10484000,
+      "currency": "KZT",
+      "flavor": "partial_plug",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_088",
+          "doc_pay_789",
+          "ld_0089",
+          "ld_0091"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "bad_fx_date_or_rate",
+      "affected_ids": [
+        "INV-4515",
+        "pay_2718"
+      ],
+      "expected_amount_minor": 13346781,
+      "currency": "KZT",
+      "flavor": "invoice_booked_wrong_rate",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_813",
+          "doc_pay_460",
+          "fx_2026-05-04_EUR_KZT",
+          "ld_0106"
+        ],
+        [
+          "doc_inv_813",
+          "doc_pay_460",
+          "fx_2026-05-04_EUR_KZT",
+          "ld_0107"
+        ]
+      ]
+    }
+  ],
+  "clean_cases": [
+    "INV-2949",
+    "INV-4508",
+    "INV-5313",
+    "INV-7940"
+  ]
+}

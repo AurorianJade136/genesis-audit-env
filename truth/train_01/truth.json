@@ -1,0 +1,137 @@
+{
+  "episode_id": "train_01",
+  "schema_version": "1.0.0",
+  "amount_tolerance_minor": 0,
+  "issues": [
+    {
+      "issue_id": "iss_01",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-4316",
+        "pay_3375",
+        "pay_8404"
+      ],
+      "expected_amount_minor": 291730000,
+      "currency": "KZT",
+      "flavor": "double_payment",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_907",
+          "doc_pay_150",
+          "doc_pay_803",
+          "ld_0108"
+        ],
+        [
+          "doc_inv_907",
+          "doc_pay_150",
+          "doc_pay_803",
+          "ld_0109"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-9810",
+        "pay_3145"
+      ],
+      "expected_amount_minor": 61105000,
+      "currency": "KZT",
+      "flavor": "partial_plug",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_804",
+          "doc_pay_673",
+          "ld_0022",
+          "ld_0024"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_03",
+      "type": "period_cutoff_error",
+      "affected_ids": [
+        "INV-7142"
+      ],
+      "expected_amount_minor": 369620000,
+      "currency": "KZT",
+      "flavor": "next_period",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_056",
+          "ld_0099"
+        ],
+        [
+          "doc_inv_056",
+          "ld_0100"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_04",
+      "type": "bad_fx_date_or_rate",
+      "affected_ids": [
+        "INV-3772",
+        "pay_7517"
+      ],
+      "expected_amount_minor": 17459798,
+      "currency": "KZT",
+      "flavor": "invoice_booked_wrong_rate",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_458",
+          "doc_pay_358",
+          "fx_2026-10-08_KWD_KZT",
+          "ld_0135"
+        ],
+        [
+          "doc_inv_458",
+          "doc_pay_358",
+          "fx_2026-10-08_KWD_KZT",
+          "ld_0136"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_05",
+      "type": "unallocated_or_partial_payment",
+      "secondary_types": [
+        "bad_fx_date_or_rate"
+      ],
+      "interacting": true,
+      "affected_ids": [
+        "INV-5376",
+        "pay_4759"
+      ],
+      "expected_amount_minor": 1530000,
+      "currency": "KWD",
+      "components": {
+        "shortfall_minor": 1530000,
+        "shortfall_currency": "KWD",
+        "fx_difference_minor": 5032442,
+        "fx_difference_currency": "KZT",
+        "correct_rate": "1542.9136",
+        "booked_rate": "1511.6562"
+      },
+      "flavor": "partial_payment_with_stale_fx",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_127",
+          "doc_pay_600",
+          "fx_2026-10-27_KWD_KZT",
+          "ld_0064",
+          "ld_0065",
+          "ld_0066"
+        ]
+      ]
+    }
+  ],
+  "clean_cases": [
+    "INV-2157",
+    "INV-3386",
+    "INV-5333",
+    "INV-7091",
+    "INV-9988"
+  ]
+}

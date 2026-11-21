@@ -1,0 +1,106 @@
+{
+  "episode_id": "train_04",
+  "schema_version": "1.0.0",
+  "amount_tolerance_minor": 0,
+  "issues": [
+    {
+      "issue_id": "iss_01",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-4721",
+        "pay_6326"
+      ],
+      "expected_amount_minor": 80000,
+      "currency": "USD",
+      "flavor": "partial_plug",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_312",
+          "doc_pay_515",
+          "ld_0176",
+          "ld_0178"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-7196",
+        "pay_2647"
+      ],
+      "expected_amount_minor": 73769000,
+      "currency": "KZT",
+      "flavor": "partial_plug",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_112",
+          "doc_pay_872",
+          "ld_0073",
+          "ld_0075"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_03",
+      "type": "bad_fx_date_or_rate",
+      "affected_ids": [
+        "INV-5352",
+        "pay_2628"
+      ],
+      "expected_amount_minor": 17656,
+      "currency": "USD",
+      "flavor": "invoice_booked_wrong_rate",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_086",
+          "doc_pay_479",
+          "fx_2026-07-09_AED_USD",
+          "ld_0001"
+        ],
+        [
+          "doc_inv_086",
+          "doc_pay_479",
+          "fx_2026-07-09_AED_USD",
+          "ld_0002"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_04",
+      "type": "bad_fx_date_or_rate",
+      "affected_ids": [
+        "INV-2579",
+        "pay_1332"
+      ],
+      "expected_amount_minor": 38868,
+      "currency": "USD",
+      "flavor": "payment_booked_wrong_rate",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_328",
+          "doc_pay_246",
+          "fx_2026-07-09_AED_USD",
+          "ld_0134"
+        ],
+        [
+          "doc_inv_328",
+          "doc_pay_246",
+          "fx_2026-07-09_AED_USD",
+          "ld_0135"
+        ]
+      ]
+    }
+  ],
+  "clean_cases": [
+    "INV-2302",
+    "INV-3658",
+    "INV-5595",
+    "INV-5916",
+    "INV-6405",
+    "INV-6971",
+    "INV-9152",
+    "INV-9367",
+    "INV-9561"
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "episode_id": "train_09",
+  "schema_version": "1.0.0",
+  "amount_tolerance_minor": 0,
+  "issues": [
+    {
+      "issue_id": "iss_01",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-3488",
+        "INV-7756"
+      ],
+      "expected_amount_minor": 317070000,
+      "currency": "KZT",
+      "flavor": "duplicate_invoice_record",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_379",
+          "doc_inv_952",
+          "ld_0096"
+        ],
+        [
+          "doc_inv_379",
+          "doc_inv_952",
+          "ld_0097"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-5083",
+        "pay_2377"
+      ],
+      "expected_amount_minor": 378000,
+      "currency": "USD",
+      "flavor": "partial_plug",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_984",
+          "doc_pay_312",
+          "ld_0013",
+          "ld_0015"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_03",
+      "type": "unallocated_or_partial_payment",
+      "secondary_types": [
+        "bad_fx_date_or_rate"
+      ],
+      "interacting": true,
+      "affected_ids": [
+        "INV-3796",
+        "pay_1061"
+      ],
+      "expected_amount_minor": 281000,
+      "currency": "USD",
+      "components": {
+        "shortfall_minor": 281000,
+        "shortfall_currency": "USD",
+        "fx_difference_minor": 10290419,
+        "fx_difference_currency": "KZT",
+        "correct_rate": "472.6597",
+        "booked_rate": "457.5932"
+      },
+      "flavor": "partial_payment_with_stale_fx",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_074",
+          "doc_pay_046",
+          "fx_2026-09-26_USD_KZT",
+          "ld_0134",
+          "ld_0135",
+          "ld_0136"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_04",
+      "type": "duplicate_invoice",
+      "secondary_types": [
+        "period_cutoff_error"
+      ],
+      "interacting": true,
+      "affected_ids": [
+        "INV-7950",
+        "pay_4874",
+        "pay_7441"
+      ],
+      "expected_amount_minor": 1534000,
+      "currency": "AED",
+      "flavor": "double_payment_of_cutoff_invoice",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_253",
+          "doc_pay_101",
+          "doc_pay_794",
+          "ld_0052",
+          "ld_0127"
+        ],
+        [
+          "doc_inv_253",
+          "doc_pay_101",
+          "doc_pay_794",
+          "ld_0053",
+          "ld_0127"
+        ],
+        [
+          "doc_inv_253",
+          "doc_pay_101",
+          "doc_pay_794",
+          "ld_0052",
+          "ld_0128"
+        ],
+        [
+          "doc_inv_253",
+          "doc_pay_101",
+          "doc_pay_794",
+          "ld_0053",
+          "ld_0128"
+        ]
+      ]
+    }
+  ],
+  "clean_cases": [
+    "INV-1071",
+    "INV-5821",
+    "INV-6592",
+    "INV-7560",
+    "INV-9165"
+  ]
+}
