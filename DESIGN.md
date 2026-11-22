@@ -76,3 +76,7 @@ timeout, repeated submission, isolation / no leakage, subprocess evaluator parit
 * The reconciliation baseline encodes the generator's error mechanics; it demonstrates solvability, not general ability.
 * No DST time zones; one policy variant (`fx_rate_date = invoice_issue_date`).
 * Isolation is process-level (see above).
+* Paired invariance checks (order permutation and ID renaming) were specified in
+  the requirements but not committed in this revision. The test suite covers
+  environment contract, generator, matcher, policies, and trajectories; it does
+  not currently exercise permutation/rename invariance.
