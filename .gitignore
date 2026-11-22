@@ -221,3 +221,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Answer keys must never live under data/ (agent-visible)
+data/*/truth.json
+
