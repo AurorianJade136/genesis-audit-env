@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "episode_id": "dev_02_pair",
+  "base_currency": "EUR",
+  "period_start": "2026-06-01T00:00:00+00:00",
+  "period_end": "2026-06-30T23:59:59+00:00",
+  "timezone": "UTC",
+  "currency_exponents": {
+    "CNY": 2,
+    "EUR": 2,
+    "GBP": 2,
+    "KZT": 2
+  },
+  "counts": {
+    "ledger_rows": 232,
+    "documents": 102
+  },
+  "rounding": {
+    "mode": "half_up",
+    "unit": "minor"
+  }
+}

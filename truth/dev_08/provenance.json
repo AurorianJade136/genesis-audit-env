@@ -1,48 +1,47 @@
 {
   "episode_id": "dev_08",
   "generator_version": "1.0",
-  "generated_at": "2026-11-22T08:18:32.014367Z",
+  "generated_at": "2026-11-22T17:27:09.009009Z",
   "template": "episode_001",
   "issues_injected": [
     {
       "issue_id": "iss_01",
       "type": "duplicate_invoice",
       "affected_ids": [
-        "INV-5302",
-        "pay_7951",
-        "pay_7498"
+        "INV-2523",
+        "INV-6650"
       ],
-      "expected_amount_minor": 483000,
-      "currency": "EUR"
+      "expected_amount_minor": 6820000,
+      "currency": "CNY"
     },
     {
       "issue_id": "iss_02",
       "type": "unallocated_or_partial_payment",
       "affected_ids": [
-        "INV-5400",
-        "pay_6022"
+        "INV-9322",
+        "pay_5892"
       ],
-      "expected_amount_minor": 597000,
-      "currency": "EUR"
+      "expected_amount_minor": 2590000,
+      "currency": "CNY"
     },
     {
       "issue_id": "iss_03",
       "type": "unallocated_or_partial_payment",
       "affected_ids": [
-        "INV-4200",
-        "pay_6246"
+        "INV-3761",
+        "pay_8978"
       ],
-      "expected_amount_minor": 387000,
-      "currency": "EUR"
+      "expected_amount_minor": 5670000,
+      "currency": "CNY"
     },
     {
       "issue_id": "iss_04",
       "type": "bad_fx_date_or_rate",
       "affected_ids": [
-        "INV-2107",
-        "pay_4643"
+        "INV-8356",
+        "pay_4687"
       ],
-      "expected_amount_minor": 35947,
+      "expected_amount_minor": 6749,
       "currency": "EUR"
     }
   ],

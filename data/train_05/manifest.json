@@ -11,8 +11,8 @@
     "KWD": 3
   },
   "counts": {
-    "ledger_rows": 164,
-    "documents": 70
+    "ledger_rows": 240,
+    "documents": 107
   },
   "rounding": {
     "mode": "half_up",

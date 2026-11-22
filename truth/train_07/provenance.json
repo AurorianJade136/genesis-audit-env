@@ -1,7 +1,7 @@
 {
   "episode_id": "train_07",
   "generator_version": "1.0",
-  "generated_at": "2026-11-22T08:18:32.018657Z",
+  "generated_at": "2026-11-22T17:27:09.015006Z",
   "template": "episode_001",
   "issues_injected": [],
   "generation_note": "Synthetic episode derived from template; see truth.json for evidence sets."

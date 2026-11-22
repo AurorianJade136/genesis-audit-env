@@ -4,13 +4,15 @@
   "amount_tolerance_minor": 0,
   "issues": [],
   "clean_cases": [
-    "INV-1030",
-    "INV-1720",
-    "INV-2772",
-    "INV-4410",
-    "INV-7601",
-    "INV-8707",
-    "INV-9294",
-    "INV-9309"
+    "INV-3520",
+    "INV-3955",
+    "INV-4798",
+    "INV-6422",
+    "INV-6700",
+    "INV-6790",
+    "INV-8463",
+    "INV-8893",
+    "INV-9117",
+    "INV-9175"
   ]
 }

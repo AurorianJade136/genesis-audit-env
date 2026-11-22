@@ -7,21 +7,21 @@
       "issue_id": "iss_01",
       "type": "duplicate_invoice",
       "affected_ids": [
-        "INV-5243",
-        "INV-1547"
+        "INV-3514",
+        "INV-5743"
       ],
-      "expected_amount_minor": 532000,
-      "currency": "EUR",
+      "expected_amount_minor": 391000,
+      "currency": "GBP",
       "flavor": "duplicate_invoice_record",
       "valid_evidence_sets": [
         [
-          "doc_inv_423",
-          "doc_inv_581",
+          "doc_inv_240",
+          "doc_inv_742",
           "ld_0032"
         ],
         [
-          "doc_inv_423",
-          "doc_inv_581",
+          "doc_inv_240",
+          "doc_inv_742",
           "ld_0033"
         ]
       ]
@@ -30,25 +30,25 @@
       "issue_id": "iss_02",
       "type": "duplicate_invoice",
       "affected_ids": [
-        "INV-6169",
-        "pay_0555",
-        "pay_5947"
+        "INV-2979",
+        "pay_9391",
+        "pay_8122"
       ],
-      "expected_amount_minor": 239840000,
-      "currency": "KZT",
+      "expected_amount_minor": 1078000,
+      "currency": "EUR",
       "flavor": "double_payment",
       "valid_evidence_sets": [
         [
-          "doc_inv_575",
-          "doc_pay_112",
-          "doc_pay_647",
-          "ld_0067"
+          "doc_inv_448",
+          "doc_pay_317",
+          "doc_pay_854",
+          "ld_0102"
         ],
         [
-          "doc_inv_575",
-          "doc_pay_112",
-          "doc_pay_647",
-          "ld_0068"
+          "doc_inv_448",
+          "doc_pay_317",
+          "doc_pay_854",
+          "ld_0103"
         ]
       ]
     },
@@ -56,19 +56,19 @@
       "issue_id": "iss_03",
       "type": "period_cutoff_error",
       "affected_ids": [
-        "INV-3337"
+        "INV-7129"
       ],
-      "expected_amount_minor": 191000,
+      "expected_amount_minor": 666000,
       "currency": "GBP",
-      "flavor": "next_period",
+      "flavor": "prior_period",
       "valid_evidence_sets": [
         [
-          "doc_inv_752",
-          "ld_0169"
+          "doc_inv_237",
+          "ld_0028"
         ],
         [
-          "doc_inv_752",
-          "ld_0170"
+          "doc_inv_237",
+          "ld_0029"
         ]
       ]
     },
@@ -80,55 +80,55 @@
       ],
       "interacting": true,
       "affected_ids": [
-        "INV-7668",
-        "pay_1121",
-        "pay_1295"
+        "INV-7747",
+        "pay_2347",
+        "pay_5541"
       ],
-      "expected_amount_minor": 397000,
-      "currency": "USD",
+      "expected_amount_minor": 1115000,
+      "currency": "EUR",
       "flavor": "double_payment_of_cutoff_invoice",
       "valid_evidence_sets": [
         [
-          "doc_inv_118",
-          "doc_pay_044",
-          "doc_pay_808",
-          "ld_0003",
-          "ld_0085"
+          "doc_inv_014",
+          "doc_pay_953",
+          "doc_pay_972",
+          "ld_0021",
+          "ld_0118"
         ],
         [
-          "doc_inv_118",
-          "doc_pay_044",
-          "doc_pay_808",
-          "ld_0004",
-          "ld_0085"
+          "doc_inv_014",
+          "doc_pay_953",
+          "doc_pay_972",
+          "ld_0022",
+          "ld_0118"
         ],
         [
-          "doc_inv_118",
-          "doc_pay_044",
-          "doc_pay_808",
-          "ld_0003",
-          "ld_0086"
+          "doc_inv_014",
+          "doc_pay_953",
+          "doc_pay_972",
+          "ld_0021",
+          "ld_0119"
         ],
         [
-          "doc_inv_118",
-          "doc_pay_044",
-          "doc_pay_808",
-          "ld_0004",
-          "ld_0086"
+          "doc_inv_014",
+          "doc_pay_953",
+          "doc_pay_972",
+          "ld_0022",
+          "ld_0119"
         ]
       ]
     }
   ],
   "clean_cases": [
-    "INV-1477",
-    "INV-1580",
-    "INV-3154",
-    "INV-5419",
-    "INV-5833",
-    "INV-6461",
-    "INV-7611",
-    "INV-7637",
-    "INV-7671",
-    "INV-9827"
+    "INV-2093",
+    "INV-2793",
+    "INV-3297",
+    "INV-5364",
+    "INV-5988",
+    "INV-6229",
+    "INV-7849",
+    "INV-8658",
+    "INV-9429",
+    "INV-9661"
   ]
 }

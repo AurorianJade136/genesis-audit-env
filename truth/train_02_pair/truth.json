@@ -1,0 +1,17 @@
+{
+  "episode_id": "train_02_pair",
+  "schema_version": "1.0.0",
+  "amount_tolerance_minor": 1,
+  "issues": [],
+  "clean_cases": [
+    "INV-00022",
+    "INV-00005",
+    "INV-00033",
+    "INV-00058",
+    "INV-00066",
+    "INV-00008",
+    "INV-00007",
+    "INV-00020",
+    "INV-00053"
+  ]
+}

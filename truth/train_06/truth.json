@@ -7,25 +7,22 @@
       "issue_id": "iss_01",
       "type": "duplicate_invoice",
       "affected_ids": [
-        "INV-3953",
-        "pay_5306",
-        "pay_4412"
+        "INV-7695",
+        "INV-2861"
       ],
-      "expected_amount_minor": 526500,
-      "currency": "JPY",
-      "flavor": "double_payment",
+      "expected_amount_minor": 281380000,
+      "currency": "KZT",
+      "flavor": "duplicate_invoice_record",
       "valid_evidence_sets": [
         [
-          "doc_inv_447",
-          "doc_pay_066",
-          "doc_pay_985",
-          "ld_0075"
+          "doc_inv_125",
+          "doc_inv_708",
+          "ld_0126"
         ],
         [
-          "doc_inv_447",
-          "doc_pay_066",
-          "doc_pay_985",
-          "ld_0076"
+          "doc_inv_125",
+          "doc_inv_708",
+          "ld_0127"
         ]
       ]
     },
@@ -33,18 +30,18 @@
       "issue_id": "iss_02",
       "type": "unallocated_or_partial_payment",
       "affected_ids": [
-        "INV-9847",
-        "pay_5351"
+        "INV-5522",
+        "pay_8260"
       ],
-      "expected_amount_minor": 41557000,
+      "expected_amount_minor": 90022000,
       "currency": "KZT",
       "flavor": "partial_plug",
       "valid_evidence_sets": [
         [
-          "doc_inv_022",
-          "doc_pay_359",
-          "ld_0127",
-          "ld_0129"
+          "doc_inv_019",
+          "doc_pay_054",
+          "ld_0034",
+          "ld_0036"
         ]
       ]
     },
@@ -52,19 +49,19 @@
       "issue_id": "iss_03",
       "type": "period_cutoff_error",
       "affected_ids": [
-        "INV-7162"
+        "INV-4662"
       ],
-      "expected_amount_minor": 296290000,
+      "expected_amount_minor": 197270000,
       "currency": "KZT",
-      "flavor": "prior_period",
+      "flavor": "next_period",
       "valid_evidence_sets": [
         [
-          "doc_inv_965",
-          "ld_0093"
+          "doc_inv_503",
+          "ld_0203"
         ],
         [
-          "doc_inv_965",
-          "ld_0094"
+          "doc_inv_503",
+          "ld_0204"
         ]
       ]
     },
@@ -72,24 +69,24 @@
       "issue_id": "iss_04",
       "type": "bad_fx_date_or_rate",
       "affected_ids": [
-        "INV-7912",
-        "pay_2434"
+        "INV-3952",
+        "pay_6853"
       ],
-      "expected_amount_minor": 2650489,
+      "expected_amount_minor": 14766798,
       "currency": "KZT",
       "flavor": "invoice_booked_wrong_rate",
       "valid_evidence_sets": [
         [
-          "doc_inv_925",
-          "doc_pay_549",
-          "fx_2026-04-19_JPY_KZT",
-          "ld_0107"
+          "doc_inv_258",
+          "doc_pay_016",
+          "fx_2026-04-04_JPY_KZT",
+          "ld_0097"
         ],
         [
-          "doc_inv_925",
-          "doc_pay_549",
-          "fx_2026-04-19_JPY_KZT",
-          "ld_0108"
+          "doc_inv_258",
+          "doc_pay_016",
+          "fx_2026-04-04_JPY_KZT",
+          "ld_0098"
         ]
       ]
     },
@@ -101,28 +98,28 @@
       ],
       "interacting": true,
       "affected_ids": [
-        "INV-1798",
-        "pay_8506"
+        "INV-7038",
+        "pay_1418"
       ],
-      "expected_amount_minor": 163720,
+      "expected_amount_minor": 645020,
       "currency": "JPY",
       "components": {
-        "shortfall_minor": 163720,
+        "shortfall_minor": 645020,
         "shortfall_currency": "JPY",
-        "fx_difference_minor": 2829037,
+        "fx_difference_minor": 6029200,
         "fx_difference_currency": "KZT",
-        "correct_rate": "3.1974",
-        "booked_rate": "3.1238"
+        "correct_rate": "3.2160",
+        "booked_rate": "3.1283"
       },
       "flavor": "partial_payment_with_stale_fx",
       "valid_evidence_sets": [
         [
-          "doc_inv_822",
-          "doc_pay_703",
-          "fx_2026-04-25_JPY_KZT",
-          "ld_0166",
-          "ld_0167",
-          "ld_0168"
+          "doc_inv_078",
+          "doc_pay_940",
+          "fx_2026-04-26_JPY_KZT",
+          "ld_0099",
+          "ld_0100",
+          "ld_0101"
         ]
       ]
     },
@@ -134,51 +131,52 @@
       ],
       "interacting": true,
       "affected_ids": [
-        "INV-9199",
-        "pay_7052",
-        "pay_6788"
+        "INV-3345",
+        "pay_5289",
+        "pay_2528"
       ],
-      "expected_amount_minor": 1882200,
-      "currency": "JPY",
+      "expected_amount_minor": 30560000,
+      "currency": "KZT",
       "flavor": "double_payment_of_cutoff_invoice",
       "valid_evidence_sets": [
         [
-          "doc_inv_135",
-          "doc_pay_717",
-          "doc_pay_848",
-          "ld_0007",
-          "ld_0083"
+          "doc_inv_692",
+          "doc_pay_342",
+          "doc_pay_398",
+          "ld_0015",
+          "ld_0154"
         ],
         [
-          "doc_inv_135",
-          "doc_pay_717",
-          "doc_pay_848",
-          "ld_0007",
-          "ld_0084"
+          "doc_inv_692",
+          "doc_pay_342",
+          "doc_pay_398",
+          "ld_0015",
+          "ld_0155"
         ],
         [
-          "doc_inv_135",
-          "doc_pay_717",
-          "doc_pay_848",
-          "ld_0008",
-          "ld_0083"
+          "doc_inv_692",
+          "doc_pay_342",
+          "doc_pay_398",
+          "ld_0016",
+          "ld_0154"
         ],
         [
-          "doc_inv_135",
-          "doc_pay_717",
-          "doc_pay_848",
-          "ld_0008",
-          "ld_0084"
+          "doc_inv_692",
+          "doc_pay_342",
+          "doc_pay_398",
+          "ld_0016",
+          "ld_0155"
         ]
       ]
     }
   ],
   "clean_cases": [
-    "INV-1825",
-    "INV-1957",
-    "INV-2592",
-    "INV-4953",
-    "INV-8105",
-    "INV-8389"
+    "INV-1307",
+    "INV-2140",
+    "INV-2402",
+    "INV-3353",
+    "INV-3906",
+    "INV-4995",
+    "INV-6395"
   ]
 }

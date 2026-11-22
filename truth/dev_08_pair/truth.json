@@ -1,0 +1,111 @@
+{
+  "episode_id": "dev_08_pair",
+  "schema_version": "1.0.0",
+  "amount_tolerance_minor": 0,
+  "issues": [
+    {
+      "issue_id": "iss_01",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-00031",
+        "INV-00033"
+      ],
+      "expected_amount_minor": 6820000,
+      "currency": "CNY",
+      "flavor": "duplicate_invoice_record",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_00020",
+          "doc_inv_00034",
+          "ld_00115"
+        ],
+        [
+          "doc_inv_00020",
+          "doc_inv_00034",
+          "ld_00116"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-00017",
+        "pay_00011"
+      ],
+      "expected_amount_minor": 2590000,
+      "currency": "CNY",
+      "flavor": "unapplied_payment",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_00043",
+          "doc_pay_00012",
+          "ld_00064"
+        ],
+        [
+          "doc_inv_00043",
+          "doc_pay_00012",
+          "ld_00065"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_03",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-00032",
+        "pay_00022"
+      ],
+      "expected_amount_minor": 5670000,
+      "currency": "CNY",
+      "flavor": "unapplied_payment",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_00056",
+          "doc_pay_00036",
+          "ld_00117"
+        ],
+        [
+          "doc_inv_00056",
+          "doc_pay_00036",
+          "ld_00118"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_04",
+      "type": "bad_fx_date_or_rate",
+      "affected_ids": [
+        "INV-00010",
+        "pay_00005"
+      ],
+      "expected_amount_minor": 6749,
+      "currency": "EUR",
+      "flavor": "payment_booked_wrong_rate",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_00013",
+          "doc_pay_00035",
+          "fx_2026-04-07_CNY_EUR",
+          "ld_00035"
+        ],
+        [
+          "doc_inv_00013",
+          "doc_pay_00035",
+          "fx_2026-04-07_CNY_EUR",
+          "ld_00036"
+        ]
+      ]
+    }
+  ],
+  "clean_cases": [
+    "INV-00053",
+    "INV-00023",
+    "INV-00008",
+    "INV-00021",
+    "INV-00058",
+    "INV-00026",
+    "INV-00022",
+    "INV-00062"
+  ]
+}

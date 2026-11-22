@@ -7,24 +7,24 @@
       "issue_id": "iss_01",
       "type": "bad_fx_date_or_rate",
       "affected_ids": [
-        "INV-1911",
-        "pay_9936"
+        "INV-8207",
+        "pay_6593"
       ],
-      "expected_amount_minor": 18511,
+      "expected_amount_minor": 21695,
       "currency": "USD",
-      "flavor": "invoice_booked_wrong_rate",
+      "flavor": "payment_booked_wrong_rate",
       "valid_evidence_sets": [
         [
-          "doc_inv_176",
-          "doc_pay_947",
-          "fx_2026-01-15_KZT_USD",
-          "ld_0054"
+          "doc_inv_633",
+          "doc_pay_310",
+          "fx_2026-01-03_KWD_USD",
+          "ld_0023"
         ],
         [
-          "doc_inv_176",
-          "doc_pay_947",
-          "fx_2026-01-15_KZT_USD",
-          "ld_0055"
+          "doc_inv_633",
+          "doc_pay_310",
+          "fx_2026-01-03_KWD_USD",
+          "ld_0024"
         ]
       ]
     },
@@ -32,24 +32,24 @@
       "issue_id": "iss_02",
       "type": "bad_fx_date_or_rate",
       "affected_ids": [
-        "INV-5800",
-        "pay_2744"
+        "INV-8906",
+        "pay_5385"
       ],
-      "expected_amount_minor": 11200,
+      "expected_amount_minor": 33110,
       "currency": "USD",
-      "flavor": "payment_booked_wrong_rate",
+      "flavor": "invoice_booked_wrong_rate",
       "valid_evidence_sets": [
         [
-          "doc_inv_196",
-          "doc_pay_122",
-          "fx_2026-01-05_KZT_USD",
-          "ld_0040"
+          "doc_inv_250",
+          "doc_pay_724",
+          "fx_2026-01-18_KWD_USD",
+          "ld_0130"
         ],
         [
-          "doc_inv_196",
-          "doc_pay_122",
-          "fx_2026-01-05_KZT_USD",
-          "ld_0041"
+          "doc_inv_250",
+          "doc_pay_724",
+          "fx_2026-01-18_KWD_USD",
+          "ld_0131"
         ]
       ]
     },
@@ -61,39 +61,40 @@
       ],
       "interacting": true,
       "affected_ids": [
-        "INV-9193",
-        "pay_6317"
+        "INV-6125",
+        "pay_5562"
       ],
-      "expected_amount_minor": 970000,
+      "expected_amount_minor": 370000,
       "currency": "KWD",
       "components": {
-        "shortfall_minor": 970000,
+        "shortfall_minor": 370000,
         "shortfall_currency": "KWD",
-        "fx_difference_minor": 43571,
+        "fx_difference_minor": 12352,
         "fx_difference_currency": "USD",
-        "correct_rate": "3.4765",
-        "booked_rate": "3.3063"
+        "correct_rate": "3.4274",
+        "booked_rate": "3.2344"
       },
       "flavor": "partial_payment_with_stale_fx",
       "valid_evidence_sets": [
         [
-          "doc_inv_729",
-          "doc_pay_784",
-          "fx_2026-01-27_KWD_USD",
-          "ld_0147",
-          "ld_0148",
-          "ld_0149"
+          "doc_inv_918",
+          "doc_pay_493",
+          "fx_2026-01-28_KWD_USD",
+          "ld_0258",
+          "ld_0259",
+          "ld_0260"
         ]
       ]
     }
   ],
   "clean_cases": [
-    "INV-2182",
-    "INV-2909",
-    "INV-3976",
-    "INV-8564",
-    "INV-9662",
-    "INV-9882",
-    "INV-9921"
+    "INV-1914",
+    "INV-2059",
+    "INV-2847",
+    "INV-5559",
+    "INV-7897",
+    "INV-8498",
+    "INV-8886",
+    "INV-9789"
   ]
 }

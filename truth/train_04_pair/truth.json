@@ -1,0 +1,109 @@
+{
+  "episode_id": "train_04_pair",
+  "schema_version": "1.0.0",
+  "amount_tolerance_minor": 0,
+  "issues": [
+    {
+      "issue_id": "iss_01",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-00047",
+        "pay_00009"
+      ],
+      "expected_amount_minor": 424000,
+      "currency": "USD",
+      "flavor": "unapplied_payment",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_00059",
+          "doc_pay_00002",
+          "ld_00034"
+        ],
+        [
+          "doc_inv_00059",
+          "doc_pay_00002",
+          "ld_00035"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-00044",
+        "pay_00027"
+      ],
+      "expected_amount_minor": 1372000,
+      "currency": "AED",
+      "flavor": "partial_plug",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_00013",
+          "doc_pay_00011",
+          "ld_00122",
+          "ld_00124"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_03",
+      "type": "bad_fx_date_or_rate",
+      "affected_ids": [
+        "INV-00058",
+        "pay_00047"
+      ],
+      "expected_amount_minor": 5853,
+      "currency": "USD",
+      "flavor": "payment_booked_wrong_rate",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_00037",
+          "doc_pay_00033",
+          "fx_2026-07-10_KZT_USD",
+          "ld_00240"
+        ],
+        [
+          "doc_inv_00037",
+          "doc_pay_00033",
+          "fx_2026-07-10_KZT_USD",
+          "ld_00241"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_04",
+      "type": "bad_fx_date_or_rate",
+      "affected_ids": [
+        "INV-00029",
+        "pay_00016"
+      ],
+      "expected_amount_minor": 1499,
+      "currency": "USD",
+      "flavor": "invoice_booked_wrong_rate",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_00023",
+          "doc_pay_00031",
+          "fx_2026-07-24_AED_USD",
+          "ld_00162"
+        ],
+        [
+          "doc_inv_00023",
+          "doc_pay_00031",
+          "fx_2026-07-24_AED_USD",
+          "ld_00163"
+        ]
+      ]
+    }
+  ],
+  "clean_cases": [
+    "INV-00052",
+    "INV-00055",
+    "INV-00041",
+    "INV-00042",
+    "INV-00003",
+    "INV-00032",
+    "INV-00035",
+    "INV-00022"
+  ]
+}

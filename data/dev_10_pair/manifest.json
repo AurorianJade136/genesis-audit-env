@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "episode_id": "dev_10_pair",
+  "base_currency": "KZT",
+  "period_start": "2026-05-01T00:00:00+04:00",
+  "period_end": "2026-05-31T23:59:59+04:00",
+  "timezone": "Asia/Dubai",
+  "currency_exponents": {
+    "EUR": 2,
+    "JPY": 0,
+    "KZT": 2
+  },
+  "counts": {
+    "ledger_rows": 255,
+    "documents": 114
+  },
+  "rounding": {
+    "mode": "half_up",
+    "unit": "minor"
+  }
+}

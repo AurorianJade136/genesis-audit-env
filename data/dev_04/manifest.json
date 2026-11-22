@@ -12,8 +12,8 @@
     "USD": 2
   },
   "counts": {
-    "ledger_rows": 176,
-    "documents": 78
+    "ledger_rows": 271,
+    "documents": 122
   },
   "rounding": {
     "mode": "half_up",

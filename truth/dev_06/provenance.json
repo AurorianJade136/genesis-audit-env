@@ -1,34 +1,34 @@
 {
   "episode_id": "dev_06",
   "generator_version": "1.0",
-  "generated_at": "2026-11-22T08:18:32.011020Z",
+  "generated_at": "2026-11-22T17:27:09.003466Z",
   "template": "episode_001",
   "issues_injected": [
     {
       "issue_id": "iss_01",
       "type": "period_cutoff_error",
       "affected_ids": [
-        "INV-1043"
+        "INV-3578"
       ],
-      "expected_amount_minor": 26370000,
+      "expected_amount_minor": 17490000,
       "currency": "KZT"
     },
     {
       "issue_id": "iss_02",
       "type": "period_cutoff_error",
       "affected_ids": [
-        "INV-8292"
+        "INV-8417"
       ],
-      "expected_amount_minor": 4096000,
+      "expected_amount_minor": 1909000,
       "currency": "AED"
     },
     {
       "issue_id": "iss_03",
       "type": "period_cutoff_error",
       "affected_ids": [
-        "INV-2049"
+        "INV-1274"
       ],
-      "expected_amount_minor": 393870000,
+      "expected_amount_minor": 262380000,
       "currency": "KZT"
     }
   ],

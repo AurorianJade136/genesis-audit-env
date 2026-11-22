@@ -1,37 +1,37 @@
 {
   "episode_id": "dev_05",
   "generator_version": "1.0",
-  "generated_at": "2026-11-22T08:18:32.011020Z",
+  "generated_at": "2026-11-22T17:27:09.003466Z",
   "template": "episode_001",
   "issues_injected": [
     {
       "issue_id": "iss_01",
       "type": "bad_fx_date_or_rate",
       "affected_ids": [
-        "INV-1911",
-        "pay_9936"
+        "INV-8207",
+        "pay_6593"
       ],
-      "expected_amount_minor": 18511,
+      "expected_amount_minor": 21695,
       "currency": "USD"
     },
     {
       "issue_id": "iss_02",
       "type": "bad_fx_date_or_rate",
       "affected_ids": [
-        "INV-5800",
-        "pay_2744"
+        "INV-8906",
+        "pay_5385"
       ],
-      "expected_amount_minor": 11200,
+      "expected_amount_minor": 33110,
       "currency": "USD"
     },
     {
       "issue_id": "iss_03",
       "type": "unallocated_or_partial_payment",
       "affected_ids": [
-        "INV-9193",
-        "pay_6317"
+        "INV-6125",
+        "pay_5562"
       ],
-      "expected_amount_minor": 970000,
+      "expected_amount_minor": 370000,
       "currency": "KWD"
     }
   ],

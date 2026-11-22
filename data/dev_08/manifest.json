@@ -10,8 +10,8 @@
     "EUR": 2
   },
   "counts": {
-    "ledger_rows": 135,
-    "documents": 59
+    "ledger_rows": 243,
+    "documents": 108
   },
   "rounding": {
     "mode": "half_up",

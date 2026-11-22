@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "episode_id": "train_08_pair",
+  "base_currency": "KZT",
+  "period_start": "2026-02-01T00:00:00+00:00",
+  "period_end": "2026-02-28T23:59:59+00:00",
+  "timezone": "UTC",
+  "currency_exponents": {
+    "GBP": 2,
+    "KZT": 2,
+    "USD": 2
+  },
+  "counts": {
+    "ledger_rows": 218,
+    "documents": 99
+  },
+  "rounding": {
+    "mode": "half_up",
+    "unit": "minor"
+  }
+}

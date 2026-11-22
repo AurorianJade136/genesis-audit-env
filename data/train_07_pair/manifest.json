@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "episode_id": "train_07_pair",
+  "base_currency": "USD",
+  "period_start": "2026-10-01T00:00:00+09:00",
+  "period_end": "2026-10-31T23:59:59+09:00",
+  "timezone": "Asia/Tokyo",
+  "currency_exponents": {
+    "KWD": 3,
+    "USD": 2
+  },
+  "counts": {
+    "ledger_rows": 215,
+    "documents": 96
+  },
+  "rounding": {
+    "mode": "half_up",
+    "unit": "minor"
+  }
+}

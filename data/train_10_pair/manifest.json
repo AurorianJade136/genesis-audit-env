@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "episode_id": "train_10_pair",
+  "base_currency": "USD",
+  "period_start": "2026-12-01T00:00:00+05:00",
+  "period_end": "2026-12-31T23:59:59+05:00",
+  "timezone": "Asia/Almaty",
+  "currency_exponents": {
+    "CNY": 2,
+    "USD": 2
+  },
+  "counts": {
+    "ledger_rows": 263,
+    "documents": 114
+  },
+  "rounding": {
+    "mode": "half_up",
+    "unit": "minor"
+  }
+}

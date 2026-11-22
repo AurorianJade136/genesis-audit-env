@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "episode_id": "train_05_pair",
+  "base_currency": "EUR",
+  "period_start": "2026-09-01T00:00:00+04:00",
+  "period_end": "2026-09-30T23:59:59+04:00",
+  "timezone": "Asia/Dubai",
+  "currency_exponents": {
+    "EUR": 2,
+    "JPY": 0,
+    "KWD": 3
+  },
+  "counts": {
+    "ledger_rows": 240,
+    "documents": 107
+  },
+  "rounding": {
+    "mode": "half_up",
+    "unit": "minor"
+  }
+}

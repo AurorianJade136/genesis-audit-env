@@ -7,19 +7,19 @@
       "issue_id": "iss_01",
       "type": "period_cutoff_error",
       "affected_ids": [
-        "INV-1043"
+        "INV-3578"
       ],
-      "expected_amount_minor": 26370000,
+      "expected_amount_minor": 17490000,
       "currency": "KZT",
-      "flavor": "next_period",
+      "flavor": "prior_period",
       "valid_evidence_sets": [
         [
-          "doc_inv_787",
-          "ld_0032"
+          "doc_inv_157",
+          "ld_0126"
         ],
         [
-          "doc_inv_787",
-          "ld_0033"
+          "doc_inv_157",
+          "ld_0127"
         ]
       ]
     },
@@ -27,18 +27,18 @@
       "issue_id": "iss_02",
       "type": "period_cutoff_error",
       "affected_ids": [
-        "INV-8292"
+        "INV-8417"
       ],
-      "expected_amount_minor": 4096000,
+      "expected_amount_minor": 1909000,
       "currency": "AED",
       "flavor": "next_period",
       "valid_evidence_sets": [
         [
-          "doc_inv_014",
+          "doc_inv_048",
           "ld_0003"
         ],
         [
-          "doc_inv_014",
+          "doc_inv_048",
           "ld_0004"
         ]
       ]
@@ -47,31 +47,31 @@
       "issue_id": "iss_03",
       "type": "period_cutoff_error",
       "affected_ids": [
-        "INV-2049"
+        "INV-1274"
       ],
-      "expected_amount_minor": 393870000,
+      "expected_amount_minor": 262380000,
       "currency": "KZT",
       "flavor": "prior_period",
       "valid_evidence_sets": [
         [
-          "doc_inv_195",
-          "ld_0040"
+          "doc_inv_984",
+          "ld_0052"
         ],
         [
-          "doc_inv_195",
-          "ld_0041"
+          "doc_inv_984",
+          "ld_0053"
         ]
       ]
     }
   ],
   "clean_cases": [
-    "INV-1770",
-    "INV-2090",
-    "INV-3960",
-    "INV-4823",
-    "INV-6972",
-    "INV-8094",
-    "INV-8421",
-    "INV-9985"
+    "INV-2163",
+    "INV-4724",
+    "INV-5143",
+    "INV-5389",
+    "INV-5640",
+    "INV-6044",
+    "INV-9236",
+    "INV-9470"
   ]
 }

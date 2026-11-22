@@ -1,69 +1,68 @@
 {
   "episode_id": "train_06",
   "generator_version": "1.0",
-  "generated_at": "2026-11-22T08:18:32.018657Z",
+  "generated_at": "2026-11-22T17:27:09.013993Z",
   "template": "episode_001",
   "issues_injected": [
     {
       "issue_id": "iss_01",
       "type": "duplicate_invoice",
       "affected_ids": [
-        "INV-3953",
-        "pay_5306",
-        "pay_4412"
+        "INV-7695",
+        "INV-2861"
       ],
-      "expected_amount_minor": 526500,
-      "currency": "JPY"
+      "expected_amount_minor": 281380000,
+      "currency": "KZT"
     },
     {
       "issue_id": "iss_02",
       "type": "unallocated_or_partial_payment",
       "affected_ids": [
-        "INV-9847",
-        "pay_5351"
+        "INV-5522",
+        "pay_8260"
       ],
-      "expected_amount_minor": 41557000,
+      "expected_amount_minor": 90022000,
       "currency": "KZT"
     },
     {
       "issue_id": "iss_03",
       "type": "period_cutoff_error",
       "affected_ids": [
-        "INV-7162"
+        "INV-4662"
       ],
-      "expected_amount_minor": 296290000,
+      "expected_amount_minor": 197270000,
       "currency": "KZT"
     },
     {
       "issue_id": "iss_04",
       "type": "bad_fx_date_or_rate",
       "affected_ids": [
-        "INV-7912",
-        "pay_2434"
+        "INV-3952",
+        "pay_6853"
       ],
-      "expected_amount_minor": 2650489,
+      "expected_amount_minor": 14766798,
       "currency": "KZT"
     },
     {
       "issue_id": "iss_05",
       "type": "unallocated_or_partial_payment",
       "affected_ids": [
-        "INV-1798",
-        "pay_8506"
+        "INV-7038",
+        "pay_1418"
       ],
-      "expected_amount_minor": 163720,
+      "expected_amount_minor": 645020,
       "currency": "JPY"
     },
     {
       "issue_id": "iss_06",
       "type": "duplicate_invoice",
       "affected_ids": [
-        "INV-9199",
-        "pay_7052",
-        "pay_6788"
+        "INV-3345",
+        "pay_5289",
+        "pay_2528"
       ],
-      "expected_amount_minor": 1882200,
-      "currency": "JPY"
+      "expected_amount_minor": 30560000,
+      "currency": "KZT"
     }
   ],
   "generation_note": "Synthetic episode derived from template; see truth.json for evidence sets."

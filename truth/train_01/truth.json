@@ -7,25 +7,25 @@
       "issue_id": "iss_01",
       "type": "duplicate_invoice",
       "affected_ids": [
-        "INV-4316",
-        "pay_3375",
-        "pay_8404"
+        "INV-9635",
+        "pay_4711",
+        "pay_2358"
       ],
-      "expected_amount_minor": 291730000,
+      "expected_amount_minor": 38830047,
       "currency": "KZT",
       "flavor": "double_payment",
       "valid_evidence_sets": [
         [
-          "doc_inv_907",
-          "doc_pay_150",
-          "doc_pay_803",
-          "ld_0108"
+          "doc_inv_493",
+          "doc_pay_054",
+          "doc_pay_316",
+          "ld_0172"
         ],
         [
-          "doc_inv_907",
-          "doc_pay_150",
-          "doc_pay_803",
-          "ld_0109"
+          "doc_inv_493",
+          "doc_pay_054",
+          "doc_pay_316",
+          "ld_0173"
         ]
       ]
     },
@@ -33,18 +33,18 @@
       "issue_id": "iss_02",
       "type": "unallocated_or_partial_payment",
       "affected_ids": [
-        "INV-9810",
-        "pay_3145"
+        "INV-9396",
+        "pay_7046"
       ],
-      "expected_amount_minor": 61105000,
+      "expected_amount_minor": 143203000,
       "currency": "KZT",
       "flavor": "partial_plug",
       "valid_evidence_sets": [
         [
-          "doc_inv_804",
-          "doc_pay_673",
-          "ld_0022",
-          "ld_0024"
+          "doc_inv_379",
+          "doc_pay_861",
+          "ld_0137",
+          "ld_0139"
         ]
       ]
     },
@@ -52,19 +52,19 @@
       "issue_id": "iss_03",
       "type": "period_cutoff_error",
       "affected_ids": [
-        "INV-7142"
+        "INV-1969"
       ],
-      "expected_amount_minor": 369620000,
-      "currency": "KZT",
+      "expected_amount_minor": 3910000,
+      "currency": "KWD",
       "flavor": "next_period",
       "valid_evidence_sets": [
         [
-          "doc_inv_056",
-          "ld_0099"
+          "doc_inv_299",
+          "ld_0103"
         ],
         [
-          "doc_inv_056",
-          "ld_0100"
+          "doc_inv_299",
+          "ld_0104"
         ]
       ]
     },
@@ -72,24 +72,24 @@
       "issue_id": "iss_04",
       "type": "bad_fx_date_or_rate",
       "affected_ids": [
-        "INV-3772",
-        "pay_7517"
+        "INV-4354",
+        "pay_5424"
       ],
-      "expected_amount_minor": 17459798,
+      "expected_amount_minor": 37225895,
       "currency": "KZT",
       "flavor": "invoice_booked_wrong_rate",
       "valid_evidence_sets": [
         [
-          "doc_inv_458",
-          "doc_pay_358",
-          "fx_2026-10-08_KWD_KZT",
-          "ld_0135"
+          "doc_inv_479",
+          "doc_pay_998",
+          "fx_2026-10-19_KWD_KZT",
+          "ld_0116"
         ],
         [
-          "doc_inv_458",
-          "doc_pay_358",
-          "fx_2026-10-08_KWD_KZT",
-          "ld_0136"
+          "doc_inv_479",
+          "doc_pay_998",
+          "fx_2026-10-19_KWD_KZT",
+          "ld_0117"
         ]
       ]
     },
@@ -101,37 +101,42 @@
       ],
       "interacting": true,
       "affected_ids": [
-        "INV-5376",
-        "pay_4759"
+        "INV-1605",
+        "pay_2218"
       ],
-      "expected_amount_minor": 1530000,
+      "expected_amount_minor": 640000,
       "currency": "KWD",
       "components": {
-        "shortfall_minor": 1530000,
+        "shortfall_minor": 640000,
         "shortfall_currency": "KWD",
-        "fx_difference_minor": 5032442,
+        "fx_difference_minor": 5229823,
         "fx_difference_currency": "KZT",
-        "correct_rate": "1542.9136",
-        "booked_rate": "1511.6562"
+        "correct_rate": "1489.9966",
+        "booked_rate": "1457.9118"
       },
       "flavor": "partial_payment_with_stale_fx",
       "valid_evidence_sets": [
         [
-          "doc_inv_127",
-          "doc_pay_600",
-          "fx_2026-10-27_KWD_KZT",
-          "ld_0064",
-          "ld_0065",
-          "ld_0066"
+          "doc_inv_877",
+          "doc_pay_898",
+          "fx_2026-10-26_KWD_KZT",
+          "ld_0126",
+          "ld_0127",
+          "ld_0128"
         ]
       ]
     }
   ],
   "clean_cases": [
-    "INV-2157",
-    "INV-3386",
-    "INV-5333",
-    "INV-7091",
-    "INV-9988"
+    "INV-1498",
+    "INV-1816",
+    "INV-3353",
+    "INV-3605",
+    "INV-3935",
+    "INV-5525",
+    "INV-7989",
+    "INV-8228",
+    "INV-8548",
+    "INV-9775"
   ]
 }

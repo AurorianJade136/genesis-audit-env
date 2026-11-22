@@ -7,18 +7,22 @@
       "issue_id": "iss_01",
       "type": "unallocated_or_partial_payment",
       "affected_ids": [
-        "INV-4721",
-        "pay_6326"
+        "INV-6828",
+        "pay_7342"
       ],
-      "expected_amount_minor": 80000,
+      "expected_amount_minor": 424000,
       "currency": "USD",
-      "flavor": "partial_plug",
+      "flavor": "unapplied_payment",
       "valid_evidence_sets": [
         [
-          "doc_inv_312",
-          "doc_pay_515",
-          "ld_0176",
-          "ld_0178"
+          "doc_inv_478",
+          "doc_pay_069",
+          "ld_0034"
+        ],
+        [
+          "doc_inv_478",
+          "doc_pay_069",
+          "ld_0035"
         ]
       ]
     },
@@ -26,18 +30,18 @@
       "issue_id": "iss_02",
       "type": "unallocated_or_partial_payment",
       "affected_ids": [
-        "INV-7196",
-        "pay_2647"
+        "INV-4345",
+        "pay_6406"
       ],
-      "expected_amount_minor": 73769000,
-      "currency": "KZT",
+      "expected_amount_minor": 1372000,
+      "currency": "AED",
       "flavor": "partial_plug",
       "valid_evidence_sets": [
         [
-          "doc_inv_112",
-          "doc_pay_872",
-          "ld_0073",
-          "ld_0075"
+          "doc_inv_157",
+          "doc_pay_824",
+          "ld_0122",
+          "ld_0124"
         ]
       ]
     },
@@ -45,24 +49,24 @@
       "issue_id": "iss_03",
       "type": "bad_fx_date_or_rate",
       "affected_ids": [
-        "INV-5352",
-        "pay_2628"
+        "INV-3587",
+        "pay_1084"
       ],
-      "expected_amount_minor": 17656,
+      "expected_amount_minor": 5853,
       "currency": "USD",
-      "flavor": "invoice_booked_wrong_rate",
+      "flavor": "payment_booked_wrong_rate",
       "valid_evidence_sets": [
         [
-          "doc_inv_086",
-          "doc_pay_479",
-          "fx_2026-07-09_AED_USD",
-          "ld_0001"
+          "doc_inv_059",
+          "doc_pay_366",
+          "fx_2026-07-10_KZT_USD",
+          "ld_0240"
         ],
         [
-          "doc_inv_086",
-          "doc_pay_479",
-          "fx_2026-07-09_AED_USD",
-          "ld_0002"
+          "doc_inv_059",
+          "doc_pay_366",
+          "fx_2026-07-10_KZT_USD",
+          "ld_0241"
         ]
       ]
     },
@@ -70,37 +74,36 @@
       "issue_id": "iss_04",
       "type": "bad_fx_date_or_rate",
       "affected_ids": [
-        "INV-2579",
-        "pay_1332"
+        "INV-6357",
+        "pay_6725"
       ],
-      "expected_amount_minor": 38868,
+      "expected_amount_minor": 1499,
       "currency": "USD",
-      "flavor": "payment_booked_wrong_rate",
+      "flavor": "invoice_booked_wrong_rate",
       "valid_evidence_sets": [
         [
-          "doc_inv_328",
-          "doc_pay_246",
-          "fx_2026-07-09_AED_USD",
-          "ld_0134"
+          "doc_inv_378",
+          "doc_pay_358",
+          "fx_2026-07-24_AED_USD",
+          "ld_0162"
         ],
         [
-          "doc_inv_328",
-          "doc_pay_246",
-          "fx_2026-07-09_AED_USD",
-          "ld_0135"
+          "doc_inv_378",
+          "doc_pay_358",
+          "fx_2026-07-24_AED_USD",
+          "ld_0163"
         ]
       ]
     }
   ],
   "clean_cases": [
-    "INV-2302",
-    "INV-3658",
-    "INV-5595",
-    "INV-5916",
-    "INV-6405",
-    "INV-6971",
-    "INV-9152",
-    "INV-9367",
-    "INV-9561"
+    "INV-3347",
+    "INV-3714",
+    "INV-3948",
+    "INV-4370",
+    "INV-4522",
+    "INV-5921",
+    "INV-5998",
+    "INV-6106"
   ]
 }

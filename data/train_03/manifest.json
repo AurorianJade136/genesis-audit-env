@@ -11,8 +11,8 @@
     "KZT": 2
   },
   "counts": {
-    "ledger_rows": 154,
-    "documents": 68
+    "ledger_rows": 255,
+    "documents": 115
   },
   "rounding": {
     "mode": "half_up",

@@ -1,0 +1,66 @@
+{
+  "episode_id": "train_03_pair",
+  "schema_version": "1.0.0",
+  "amount_tolerance_minor": 0,
+  "issues": [
+    {
+      "issue_id": "iss_01",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-00027",
+        "pay_00017",
+        "pay_00019"
+      ],
+      "expected_amount_minor": 375000,
+      "currency": "EUR",
+      "flavor": "double_payment",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_00060",
+          "doc_pay_00015",
+          "doc_pay_00021",
+          "ld_00099"
+        ],
+        [
+          "doc_inv_00060",
+          "doc_pay_00015",
+          "doc_pay_00021",
+          "ld_00100"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-00026",
+        "INV-00028"
+      ],
+      "expected_amount_minor": 1042000,
+      "currency": "EUR",
+      "flavor": "duplicate_invoice_record",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_00016",
+          "doc_inv_00054",
+          "ld_00089"
+        ],
+        [
+          "doc_inv_00016",
+          "doc_inv_00054",
+          "ld_00090"
+        ]
+      ]
+    }
+  ],
+  "clean_cases": [
+    "INV-00015",
+    "INV-00044",
+    "INV-00017",
+    "INV-00033",
+    "INV-00043",
+    "INV-00058",
+    "INV-00054",
+    "INV-00042"
+  ]
+}

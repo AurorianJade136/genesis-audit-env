@@ -1,7 +1,7 @@
 {
   "episode_id": "dev_09",
   "schema_version": "1.0.0",
-  "amount_tolerance_minor": 0,
+  "amount_tolerance_minor": 1,
   "issues": [
     {
       "issue_id": "iss_01",
@@ -11,28 +11,28 @@
       ],
       "interacting": true,
       "affected_ids": [
-        "INV-9319",
-        "pay_8354"
+        "INV-6629",
+        "pay_3446"
       ],
-      "expected_amount_minor": 754150,
-      "currency": "JPY",
+      "expected_amount_minor": 236000,
+      "currency": "EUR",
       "components": {
-        "shortfall_minor": 754150,
-        "shortfall_currency": "JPY",
-        "fx_difference_minor": 14276917,
+        "shortfall_minor": 236000,
+        "shortfall_currency": "EUR",
+        "fx_difference_minor": 16527789,
         "fx_difference_currency": "KZT",
-        "correct_rate": "3.5996",
-        "booked_rate": "3.4395"
+        "correct_rate": "540.0837",
+        "booked_rate": "521.7805"
       },
       "flavor": "partial_payment_with_stale_fx",
       "valid_evidence_sets": [
         [
-          "doc_inv_692",
-          "doc_pay_275",
-          "fx_2026-09-25_JPY_KZT",
-          "ld_0132",
-          "ld_0133",
-          "ld_0134"
+          "doc_inv_628",
+          "doc_pay_403",
+          "fx_2026-09-27_EUR_KZT",
+          "ld_0050",
+          "ld_0051",
+          "ld_0052"
         ]
       ]
     },
@@ -44,38 +44,39 @@
       ],
       "interacting": true,
       "affected_ids": [
-        "INV-3298",
-        "pay_3918"
+        "INV-9305",
+        "pay_6897"
       ],
-      "expected_amount_minor": 2361000,
+      "expected_amount_minor": 2038000,
       "currency": "CNY",
       "components": {
-        "shortfall_minor": 2361000,
+        "shortfall_minor": 2038000,
         "shortfall_currency": "CNY",
-        "fx_difference_minor": 7222203,
+        "fx_difference_minor": 14868528,
         "fx_difference_currency": "KZT",
-        "correct_rate": "63.9458",
-        "booked_rate": "62.8497"
+        "correct_rate": "62.5817",
+        "booked_rate": "60.6977"
       },
       "flavor": "partial_payment_with_stale_fx",
       "valid_evidence_sets": [
         [
-          "doc_inv_404",
-          "doc_pay_265",
-          "fx_2026-09-26_CNY_KZT",
-          "ld_0135",
-          "ld_0136",
-          "ld_0137"
+          "doc_inv_626",
+          "doc_pay_834",
+          "fx_2026-09-27_CNY_KZT",
+          "ld_0212",
+          "ld_0213",
+          "ld_0214"
         ]
       ]
     }
   ],
   "clean_cases": [
-    "INV-4128",
-    "INV-7693",
-    "INV-7884",
-    "INV-8071",
-    "INV-8149",
-    "INV-9501"
+    "INV-2334",
+    "INV-2711",
+    "INV-4139",
+    "INV-5082",
+    "INV-6039",
+    "INV-6247",
+    "INV-9357"
   ]
 }

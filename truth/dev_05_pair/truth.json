@@ -1,0 +1,100 @@
+{
+  "episode_id": "dev_05_pair",
+  "schema_version": "1.0.0",
+  "amount_tolerance_minor": 0,
+  "issues": [
+    {
+      "issue_id": "iss_01",
+      "type": "bad_fx_date_or_rate",
+      "affected_ids": [
+        "INV-00003",
+        "pay_00001"
+      ],
+      "expected_amount_minor": 21695,
+      "currency": "USD",
+      "flavor": "payment_booked_wrong_rate",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_00043",
+          "doc_pay_00015",
+          "fx_2026-01-03_KWD_USD",
+          "ld_00023"
+        ],
+        [
+          "doc_inv_00043",
+          "doc_pay_00015",
+          "fx_2026-01-03_KWD_USD",
+          "ld_00024"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "bad_fx_date_or_rate",
+      "affected_ids": [
+        "INV-00038",
+        "pay_00027"
+      ],
+      "expected_amount_minor": 33110,
+      "currency": "USD",
+      "flavor": "invoice_booked_wrong_rate",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_00021",
+          "doc_pay_00036",
+          "fx_2026-01-18_KWD_USD",
+          "ld_00130"
+        ],
+        [
+          "doc_inv_00021",
+          "doc_pay_00036",
+          "fx_2026-01-18_KWD_USD",
+          "ld_00131"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_03",
+      "type": "unallocated_or_partial_payment",
+      "secondary_types": [
+        "bad_fx_date_or_rate"
+      ],
+      "interacting": true,
+      "affected_ids": [
+        "INV-00067",
+        "pay_00048"
+      ],
+      "expected_amount_minor": 370000,
+      "currency": "KWD",
+      "components": {
+        "shortfall_minor": 370000,
+        "shortfall_currency": "KWD",
+        "fx_difference_minor": 12352,
+        "fx_difference_currency": "USD",
+        "correct_rate": "3.4274",
+        "booked_rate": "3.2344"
+      },
+      "flavor": "partial_payment_with_stale_fx",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_00060",
+          "doc_pay_00025",
+          "fx_2026-01-28_KWD_USD",
+          "ld_00258",
+          "ld_00259",
+          "ld_00260"
+        ]
+      ]
+    }
+  ],
+  "clean_cases": [
+    "INV-00030",
+    "INV-00048",
+    "INV-00068",
+    "INV-00009",
+    "INV-00059",
+    "INV-00001",
+    "INV-00025",
+    "INV-00013"
+  ]
+}

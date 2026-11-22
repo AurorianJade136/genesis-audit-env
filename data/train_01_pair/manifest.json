@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "episode_id": "train_01_pair",
+  "base_currency": "KZT",
+  "period_start": "2026-10-01T00:00:00+05:00",
+  "period_end": "2026-10-31T23:59:59+05:00",
+  "timezone": "Asia/Almaty",
+  "currency_exponents": {
+    "KWD": 3,
+    "KZT": 2
+  },
+  "counts": {
+    "ledger_rows": 254,
+    "documents": 110
+  },
+  "rounding": {
+    "mode": "half_up",
+    "unit": "minor"
+  }
+}

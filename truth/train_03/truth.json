@@ -7,22 +7,25 @@
       "issue_id": "iss_01",
       "type": "duplicate_invoice",
       "affected_ids": [
-        "INV-4948",
-        "INV-8206"
+        "INV-5929",
+        "pay_5426",
+        "pay_5839"
       ],
-      "expected_amount_minor": 3622000,
-      "currency": "AED",
-      "flavor": "duplicate_invoice_record",
+      "expected_amount_minor": 375000,
+      "currency": "EUR",
+      "flavor": "double_payment",
       "valid_evidence_sets": [
         [
-          "doc_inv_331",
-          "doc_inv_434",
-          "ld_0100"
+          "doc_inv_806",
+          "doc_pay_413",
+          "doc_pay_553",
+          "ld_0099"
         ],
         [
-          "doc_inv_331",
-          "doc_inv_434",
-          "ld_0101"
+          "doc_inv_806",
+          "doc_pay_413",
+          "doc_pay_553",
+          "ld_0100"
         ]
       ]
     },
@@ -30,37 +33,34 @@
       "issue_id": "iss_02",
       "type": "duplicate_invoice",
       "affected_ids": [
-        "INV-9835",
-        "pay_7935",
-        "pay_5793"
+        "INV-3183",
+        "INV-9779"
       ],
-      "expected_amount_minor": 289150000,
-      "currency": "KZT",
-      "flavor": "double_payment",
+      "expected_amount_minor": 1042000,
+      "currency": "EUR",
+      "flavor": "duplicate_invoice_record",
       "valid_evidence_sets": [
         [
-          "doc_inv_203",
-          "doc_pay_575",
-          "doc_pay_776",
-          "ld_0083"
+          "doc_inv_202",
+          "doc_inv_741",
+          "ld_0089"
         ],
         [
-          "doc_inv_203",
-          "doc_pay_575",
-          "doc_pay_776",
-          "ld_0084"
+          "doc_inv_202",
+          "doc_inv_741",
+          "ld_0090"
         ]
       ]
     }
   ],
   "clean_cases": [
-    "INV-1331",
-    "INV-3751",
-    "INV-4820",
-    "INV-5396",
-    "INV-6456",
-    "INV-6675",
-    "INV-7497",
-    "INV-8884"
+    "INV-3098",
+    "INV-3650",
+    "INV-4032",
+    "INV-4850",
+    "INV-4980",
+    "INV-5541",
+    "INV-5804",
+    "INV-9608"
   ]
 }

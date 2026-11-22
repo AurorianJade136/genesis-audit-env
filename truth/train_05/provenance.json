@@ -1,36 +1,36 @@
 {
   "episode_id": "train_05",
   "generator_version": "1.0",
-  "generated_at": "2026-11-22T08:18:32.018657Z",
+  "generated_at": "2026-11-22T17:27:09.013993Z",
   "template": "episode_001",
   "issues_injected": [
     {
       "issue_id": "iss_01",
       "type": "period_cutoff_error",
       "affected_ids": [
-        "INV-8169"
+        "INV-5646"
       ],
-      "expected_amount_minor": 164600,
-      "currency": "JPY"
+      "expected_amount_minor": 119000,
+      "currency": "EUR"
     },
     {
       "issue_id": "iss_02",
       "type": "period_cutoff_error",
       "affected_ids": [
-        "INV-1601"
+        "INV-4147"
       ],
-      "expected_amount_minor": 1244000,
+      "expected_amount_minor": 1218000,
       "currency": "EUR"
     },
     {
       "issue_id": "iss_03",
       "type": "duplicate_invoice",
       "affected_ids": [
-        "INV-9968",
-        "pay_2972",
-        "pay_5175"
+        "INV-8136",
+        "pay_0398",
+        "pay_8945"
       ],
-      "expected_amount_minor": 415000,
+      "expected_amount_minor": 1136000,
       "currency": "EUR"
     }
   ],

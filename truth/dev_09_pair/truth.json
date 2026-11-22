@@ -1,0 +1,82 @@
+{
+  "episode_id": "dev_09_pair",
+  "schema_version": "1.0.0",
+  "amount_tolerance_minor": 1,
+  "issues": [
+    {
+      "issue_id": "iss_01",
+      "type": "unallocated_or_partial_payment",
+      "secondary_types": [
+        "bad_fx_date_or_rate"
+      ],
+      "interacting": true,
+      "affected_ids": [
+        "INV-00014",
+        "pay_00010"
+      ],
+      "expected_amount_minor": 236000,
+      "currency": "EUR",
+      "components": {
+        "shortfall_minor": 236000,
+        "shortfall_currency": "EUR",
+        "fx_difference_minor": 16527789,
+        "fx_difference_currency": "KZT",
+        "correct_rate": "540.0837",
+        "booked_rate": "521.7805"
+      },
+      "flavor": "partial_payment_with_stale_fx",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_00039",
+          "doc_pay_00013",
+          "fx_2026-09-27_EUR_KZT",
+          "ld_00050",
+          "ld_00051",
+          "ld_00052"
+        ]
+      ]
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "unallocated_or_partial_payment",
+      "secondary_types": [
+        "bad_fx_date_or_rate"
+      ],
+      "interacting": true,
+      "affected_ids": [
+        "INV-00064",
+        "pay_00037"
+      ],
+      "expected_amount_minor": 2038000,
+      "currency": "CNY",
+      "components": {
+        "shortfall_minor": 2038000,
+        "shortfall_currency": "CNY",
+        "fx_difference_minor": 14868528,
+        "fx_difference_currency": "KZT",
+        "correct_rate": "62.5817",
+        "booked_rate": "60.6977"
+      },
+      "flavor": "partial_payment_with_stale_fx",
+      "valid_evidence_sets": [
+        [
+          "doc_inv_00038",
+          "doc_pay_00030",
+          "fx_2026-09-27_CNY_KZT",
+          "ld_00212",
+          "ld_00213",
+          "ld_00214"
+        ]
+      ]
+    }
+  ],
+  "clean_cases": [
+    "INV-00012",
+    "INV-00023",
+    "INV-00008",
+    "INV-00009",
+    "INV-00005",
+    "INV-00048",
+    "INV-00049"
+  ]
+}
