@@ -1,0 +1,29 @@
+{
+  "episode_id": "dev_09",
+  "generator_version": "1.0",
+  "generated_at": "2026-11-22T08:18:32.014367Z",
+  "template": "episode_001",
+  "issues_injected": [
+    {
+      "issue_id": "iss_01",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-9319",
+        "pay_8354"
+      ],
+      "expected_amount_minor": 754150,
+      "currency": "JPY"
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-3298",
+        "pay_3918"
+      ],
+      "expected_amount_minor": 2361000,
+      "currency": "CNY"
+    }
+  ],
+  "generation_note": "Synthetic episode derived from template; see truth.json for evidence sets."
+}

@@ -1,0 +1,50 @@
+{
+  "episode_id": "dev_08",
+  "generator_version": "1.0",
+  "generated_at": "2026-11-22T08:18:32.014367Z",
+  "template": "episode_001",
+  "issues_injected": [
+    {
+      "issue_id": "iss_01",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-5302",
+        "pay_7951",
+        "pay_7498"
+      ],
+      "expected_amount_minor": 483000,
+      "currency": "EUR"
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-5400",
+        "pay_6022"
+      ],
+      "expected_amount_minor": 597000,
+      "currency": "EUR"
+    },
+    {
+      "issue_id": "iss_03",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-4200",
+        "pay_6246"
+      ],
+      "expected_amount_minor": 387000,
+      "currency": "EUR"
+    },
+    {
+      "issue_id": "iss_04",
+      "type": "bad_fx_date_or_rate",
+      "affected_ids": [
+        "INV-2107",
+        "pay_4643"
+      ],
+      "expected_amount_minor": 35947,
+      "currency": "EUR"
+    }
+  ],
+  "generation_note": "Synthetic episode derived from template; see truth.json for evidence sets."
+}

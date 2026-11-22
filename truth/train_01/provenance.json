@@ -1,0 +1,59 @@
+{
+  "episode_id": "train_01",
+  "generator_version": "1.0",
+  "generated_at": "2026-11-22T08:18:32.017224Z",
+  "template": "episode_001",
+  "issues_injected": [
+    {
+      "issue_id": "iss_01",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-4316",
+        "pay_3375",
+        "pay_8404"
+      ],
+      "expected_amount_minor": 291730000,
+      "currency": "KZT"
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-9810",
+        "pay_3145"
+      ],
+      "expected_amount_minor": 61105000,
+      "currency": "KZT"
+    },
+    {
+      "issue_id": "iss_03",
+      "type": "period_cutoff_error",
+      "affected_ids": [
+        "INV-7142"
+      ],
+      "expected_amount_minor": 369620000,
+      "currency": "KZT"
+    },
+    {
+      "issue_id": "iss_04",
+      "type": "bad_fx_date_or_rate",
+      "affected_ids": [
+        "INV-3772",
+        "pay_7517"
+      ],
+      "expected_amount_minor": 17459798,
+      "currency": "KZT"
+    },
+    {
+      "issue_id": "iss_05",
+      "type": "unallocated_or_partial_payment",
+      "affected_ids": [
+        "INV-5376",
+        "pay_4759"
+      ],
+      "expected_amount_minor": 1530000,
+      "currency": "KWD"
+    }
+  ],
+  "generation_note": "Synthetic episode derived from template; see truth.json for evidence sets."
+}

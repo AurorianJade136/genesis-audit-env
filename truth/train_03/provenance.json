@@ -1,0 +1,30 @@
+{
+  "episode_id": "train_03",
+  "generator_version": "1.0",
+  "generated_at": "2026-11-22T08:18:32.018657Z",
+  "template": "episode_001",
+  "issues_injected": [
+    {
+      "issue_id": "iss_01",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-4948",
+        "INV-8206"
+      ],
+      "expected_amount_minor": 3622000,
+      "currency": "AED"
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "duplicate_invoice",
+      "affected_ids": [
+        "INV-9835",
+        "pay_7935",
+        "pay_5793"
+      ],
+      "expected_amount_minor": 289150000,
+      "currency": "KZT"
+    }
+  ],
+  "generation_note": "Synthetic episode derived from template; see truth.json for evidence sets."
+}

@@ -1,0 +1,36 @@
+{
+  "episode_id": "dev_06",
+  "generator_version": "1.0",
+  "generated_at": "2026-11-22T08:18:32.011020Z",
+  "template": "episode_001",
+  "issues_injected": [
+    {
+      "issue_id": "iss_01",
+      "type": "period_cutoff_error",
+      "affected_ids": [
+        "INV-1043"
+      ],
+      "expected_amount_minor": 26370000,
+      "currency": "KZT"
+    },
+    {
+      "issue_id": "iss_02",
+      "type": "period_cutoff_error",
+      "affected_ids": [
+        "INV-8292"
+      ],
+      "expected_amount_minor": 4096000,
+      "currency": "AED"
+    },
+    {
+      "issue_id": "iss_03",
+      "type": "period_cutoff_error",
+      "affected_ids": [
+        "INV-2049"
+      ],
+      "expected_amount_minor": 393870000,
+      "currency": "KZT"
+    }
+  ],
+  "generation_note": "Synthetic episode derived from template; see truth.json for evidence sets."
+}
